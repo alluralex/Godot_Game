@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2x2fih0mwi4w"]
+
+[ext_resource type="Script" path="res://scenes/ButtonBack.cs" id="1_0sy0p"]
+[ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="2_bnbqb"]
+[ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="2_veuip"]
+[ext_resource type="Script" path="res://scenes/AudioStreamPlayer.cs" id="4_si186"]
+
+[node name="Settings" type="Node2D"]
+
+[node name="ButtonBack" type="Button" parent="."]
+offset_left = 450.0
+offset_top = 500.0
+offset_right = 759.0
+offset_bottom = 559.0
+theme_override_colors/font_color = Color(0.945098, 0.533333, 0.945098, 1)
+theme_override_fonts/font = ExtResource("2_veuip")
+theme_override_font_sizes/font_size = 35
+text = "BACK"
+script = ExtResource("1_0sy0p")
+
+[node name="MusicLine" type="HSlider" parent="."]
+modulate = Color(1, 0.556281, 0.995973, 1)
+self_modulate = Color(0.82395, 0.944549, 0.291627, 1)
+offset_left = 500.0
+offset_top = 114.0
+offset_right = 715.0
+offset_bottom = 167.0
+
+[node name="MusicText" type="Label" parent="MusicLine"]
+layout_mode = 0
+offset_right = 210.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_veuip")
+text = "MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_thread_group = 2
+process_thread_group_order = 1
+process_thread_messages = 0
+stream = ExtResource("2_bnbqb")
+autoplay = true
+bus = &"Music"
+script = ExtResource("4_si186")
+
+[node name="SoundLine2" type="HSlider" parent="."]
+modulate = Color(1, 0.556281, 0.995973, 1)
+self_modulate = Color(0.82395, 0.944549, 0.291627, 1)
+offset_left = 501.0
+offset_top = 181.0
+offset_right = 716.0
+offset_bottom = 234.0
+step = 10.0
+
+[node name="SoundText" type="Label" parent="SoundLine2"]
+layout_mode = 0
+offset_right = 213.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_veuip")
+text = "SOUNDS
+"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 887.0
+offset_top = 186.0
+offset_right = 1097.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("2_veuip")
+item_count = 4
+popup/item_0/text = "1920x1080"
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x1024"
+popup/item_2/id = 2
+popup/item_3/text = "2560x1440"
+popup/item_3/id = 3
+script = ExtResource("4_si186")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = 891.0
+offset_top = 115.0
+offset_right = 1071.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.945098, 0.533333, 0.945098, 1)
+theme_override_fonts/font = ExtResource("2_veuip")
+text = "FULLSCREEN"
+
+[connection signal="pressed" from="ButtonBack" to="ButtonBack" method="_on_pressed"]
+[connection signal="pressed" from="OptionButton" to="OptionButton" method="_on_pressed"]
