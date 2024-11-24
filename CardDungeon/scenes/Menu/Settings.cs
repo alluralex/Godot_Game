@@ -10,6 +10,6 @@ public partial class Settings : Button
 	}
 	private void _on_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/settingsgame.tscn");
+		
 	}
 }

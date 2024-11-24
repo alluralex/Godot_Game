@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2x2fih0mwi4w"]
 
-[ext_resource type="Script" path="res://scenes/ButtonBack.cs" id="1_0sy0p"]
+[ext_resource type="Script" path="res://scenes/Menu/ButtonBack.cs" id="1_0sy0p"]
 [ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="2_bnbqb"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="2_veuip"]
-[ext_resource type="Script" path="res://scenes/AudioStreamPlayer.cs" id="4_si186"]
+[ext_resource type="Script" path="res://scenes/Menu/AudioStreamPlayer.cs" id="4_si186"]
 
 [node name="Settings" type="Node2D"]
 

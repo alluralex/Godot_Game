@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://dl1qtmqhal033"]
+[gd_scene load_steps=10 format=3 uid="uid://dl1qtmqhal033"]
 
 [ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="1_mh6pt"]
 [ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/Settings.png" id="2_1wk4u"]
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="3_c8h33"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="4_khwt1"]
 [ext_resource type="Texture2D" uid="uid://0v6tcg1irfjx" path="res://Photos/shield.png" id="5_8j8yi"]
-[ext_resource type="Script" path="res://scenes/Settings.cs" id="5_hdtgl"]
-[ext_resource type="Script" path="res://scenes/Exit.cs" id="6_iadvd"]
+[ext_resource type="Script" path="res://scenes/Menu/Settings.cs" id="5_hdtgl"]
+[ext_resource type="Script" path="res://scenes/Menu/Exit.cs" id="6_iadvd"]
 [ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="7_11yh3"]
+[ext_resource type="PackedScene" uid="uid://dqpfk78ur2uew" path="res://scenes/Menu/bg.tscn" id="9_fqh7i"]
 
 [node name="Menu" type="Node2D"]
 
@@ -78,6 +79,8 @@ process_thread_messages = 0
 stream = ExtResource("7_11yh3")
 autoplay = true
 bus = &"Music"
+
+[node name="BG" parent="." instance=ExtResource("9_fqh7i")]
 
 [connection signal="pressed" from="Buttons/Settings" to="Buttons/Settings" method="_on_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="Buttons/Exit" method="_on_pressed"]
