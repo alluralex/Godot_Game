@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://dl1qtmqhal033"]
+
+[ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="1_mh6pt"]
+[ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/Settings.png" id="2_1wk4u"]
+[ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="3_c8h33"]
+[ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="4_khwt1"]
+[ext_resource type="Texture2D" uid="uid://0v6tcg1irfjx" path="res://Photos/shield.png" id="5_8j8yi"]
+[ext_resource type="Script" path="res://scenes/Settings.cs" id="5_hdtgl"]
+[ext_resource type="Script" path="res://scenes/Exit.cs" id="6_iadvd"]
+[ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="7_11yh3"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 57.0
+offset_right = 907.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0.166606, 0.517376, 0.483334, 1)
+theme_override_colors/font_shadow_color = Color(0.419239, 0.658434, 0, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 130
+text = "CARD DUNGEON"
+
+[node name="Иконка" type="Sprite2D" parent="Label"]
+position = Vector2(-105, 64)
+scale = Vector2(0.912, 0.912)
+texture = ExtResource("5_8j8yi")
+
+[node name="Иконка2" type="Sprite2D" parent="Label"]
+position = Vector2(744, 64)
+scale = Vector2(0.912109, 0.912109)
+texture = ExtResource("5_8j8yi")
+
+[node name="Buttons" type="BoxContainer" parent="."]
+offset_left = 296.0
+offset_top = 336.0
+offset_right = 838.0
+offset_bottom = 560.0
+alignment = 1
+vertical = true
+
+[node name="NewGame" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.548634, 0.129873, 0.207966, 1)
+theme_override_colors/font_color = Color(0.773728, 0.376146, 0.508055, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "START"
+icon = ExtResource("1_mh6pt")
+
+[node name="Settings" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "SETTINGS"
+icon = ExtResource("2_1wk4u")
+script = ExtResource("5_hdtgl")
+
+[node name="Exit" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+icon = ExtResource("3_c8h33")
+script = ExtResource("6_iadvd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_thread_group = 1
+process_thread_group_order = 1
+process_thread_messages = 0
+stream = ExtResource("7_11yh3")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="Buttons/Settings" to="Buttons/Settings" method="_on_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="Buttons/Exit" method="_on_pressed"]
