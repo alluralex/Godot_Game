@@ -1,9 +1,25 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2x2fih0mwi4w"]
 
-[ext_resource type="Script" path="res://scenes/Menu/ButtonBack.cs" id="1_0sy0p"]
 [ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="2_bnbqb"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="2_veuip"]
 [ext_resource type="Script" path="res://scenes/Menu/AudioStreamPlayer.cs" id="4_si186"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_h5ymg"]
+script/source = "using Godot;
+using System;
+
+public partial class ButtonBack : Button
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+	private void _on_pressed()
+	{
+		GetTree().ChangeSceneToFile(\"res://scenes/menu.tscn\");
+	}
+}
+"
 
 [node name="Settings" type="Node2D"]
 
@@ -16,7 +32,7 @@ theme_override_colors/font_color = Color(0.945098, 0.533333, 0.945098, 1)
 theme_override_fonts/font = ExtResource("2_veuip")
 theme_override_font_sizes/font_size = 35
 text = "BACK"
-script = ExtResource("1_0sy0p")
+script = SubResource("CSharpScript_h5ymg")
 
 [node name="MusicLine" type="HSlider" parent="."]
 modulate = Color(1, 0.556281, 0.995973, 1)

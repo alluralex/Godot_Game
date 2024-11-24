@@ -25,6 +25,13 @@ window/stretch/aspect="ignore"
 
 project/assembly_name="Сохранялкагодота"
 
+[file_customization]
+
+folder_colors={
+"res://Heroes/Mage/": "purple",
+"res://Heroes/Warrior/": "red"
+}
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.211765, 0.239216, 0.290196, 1)
