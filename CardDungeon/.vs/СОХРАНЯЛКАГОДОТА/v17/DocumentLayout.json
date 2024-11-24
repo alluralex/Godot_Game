@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\alex\\desktop\\godot_creations\\godot_game\\carddungeon\\heroes\\warrior\\herowarrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:heroes\\warrior\\herowarrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Heroes\\Warrior\\HeroWarrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\alex\\desktop\\godot_creations\\godot_game\\carddungeon\\scenes\\menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,10 +32,8 @@
               "RelativeDocumentMoniker": "Heroes\\Warrior\\HeroWarrior.cs",
               "ToolTip": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs",
               "RelativeToolTip": "Heroes\\Warrior\\HeroWarrior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T06:28:55.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T06:28:55.89Z"
             },
             {
               "$type": "Document",

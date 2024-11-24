@@ -1,7 +1,6 @@
-[gd_scene load_steps=59 format=3 uid="uid://bqg8yokgbfj8k"]
+[gd_scene load_steps=58 format=3 uid="uid://bqg8yokgbfj8k"]
 
 [ext_resource type="Texture2D" uid="uid://m4y7x7dhiu1s" path="res://Heroes/Warrior/Sprites/NightBorne.png" id="1_vk8tx"]
-[ext_resource type="Script" path="res://Heroes/Warrior/HeroWarrior.cs" id="2_wdlob"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w2mqt"]
 atlas = ExtResource("1_vk8tx")
@@ -422,4 +421,3 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_wtjmi")
 animation = &"walk"
 frame_progress = 0.0139539
-script = ExtResource("2_wdlob")

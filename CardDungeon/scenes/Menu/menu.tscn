@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dl1qtmqhal033"]
+[gd_scene load_steps=11 format=3 uid="uid://dl1qtmqhal033"]
 
 [ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="1_mh6pt"]
 [ext_resource type="Script" path="res://scenes/Menu/Menu.cs" id="1_x5ddw"]
@@ -6,11 +6,97 @@
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="3_c8h33"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="4_khwt1"]
 [ext_resource type="Texture2D" uid="uid://0v6tcg1irfjx" path="res://Photos/shield.png" id="5_8j8yi"]
+[ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/Back.png" id="6_0kuck"]
+[ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/GALKA.png" id="7_4gwhv"]
 [ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="7_11yh3"]
 [ext_resource type="PackedScene" uid="uid://dqpfk78ur2uew" path="res://scenes/Menu/bg.tscn" id="9_fqh7i"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_x5ddw")
+
+[node name="Main" type="Node2D" parent="."]
+
+[node name="Buttons" type="BoxContainer" parent="Main"]
+offset_left = 298.0
+offset_top = 266.0
+offset_right = 840.0
+offset_bottom = 566.0
+alignment = 1
+vertical = true
+
+[node name="B_Contunie" type="Button" parent="Main/Buttons"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.548634, 0.129873, 0.207966, 1)
+theme_override_colors/font_color = Color(0.773728, 0.376146, 0.508055, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "ПРОДОЛЖИТЬ"
+icon = ExtResource("1_mh6pt")
+
+[node name="B_Start" type="Button" parent="Main/Buttons"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.548634, 0.129873, 0.207966, 1)
+theme_override_colors/font_color = Color(0.773728, 0.376146, 0.508055, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "НОВАЯ ИГРА
+"
+icon = ExtResource("1_mh6pt")
+
+[node name="B_Settings" type="Button" parent="Main/Buttons"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "ПАРАМЕТРЫ"
+icon = ExtResource("2_1wk4u")
+
+[node name="B_Exit" type="Button" parent="Main/Buttons"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+text = "ВЫХОД"
+icon = ExtResource("3_c8h33")
+
+[node name="Settings" type="Node2D" parent="."]
+
+[node name="B_Back" type="Button" parent="Settings"]
+texture_filter = 1
+offset_left = 19.0
+offset_top = 553.0
+offset_right = 257.0
+offset_bottom = 625.0
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+text = "НАЗАД"
+icon = ExtResource("6_0kuck")
+
+[node name="B_SaveSettings" type="Button" parent="Settings"]
+texture_filter = 1
+offset_left = 903.0
+offset_top = 556.0
+offset_right = 1141.0
+offset_bottom = 628.0
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 40
+text = "СОХРАНИТЬ
+"
+icon = ExtResource("7_4gwhv")
+icon_alignment = 2
 
 [node name="Label" type="Label" parent="."]
 offset_left = 256.0
@@ -33,46 +119,6 @@ position = Vector2(744, 64)
 scale = Vector2(0.912109, 0.912109)
 texture = ExtResource("5_8j8yi")
 
-[node name="Buttons" type="BoxContainer" parent="."]
-offset_left = 296.0
-offset_top = 336.0
-offset_right = 838.0
-offset_bottom = 560.0
-alignment = 1
-vertical = true
-
-[node name="B_Start" type="Button" parent="Buttons"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.548634, 0.129873, 0.207966, 1)
-theme_override_colors/font_color = Color(0.773728, 0.376146, 0.508055, 1)
-theme_override_fonts/font = ExtResource("4_khwt1")
-theme_override_font_sizes/font_size = 40
-action_mode = 0
-text = "START"
-icon = ExtResource("1_mh6pt")
-
-[node name="B_Settings" type="Button" parent="Buttons"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
-theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
-theme_override_fonts/font = ExtResource("4_khwt1")
-theme_override_font_sizes/font_size = 40
-action_mode = 0
-text = "SETTINGS"
-icon = ExtResource("2_1wk4u")
-
-[node name="B_Exit" type="Button" parent="Buttons"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
-theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
-theme_override_fonts/font = ExtResource("4_khwt1")
-theme_override_font_sizes/font_size = 40
-text = "EXIT"
-icon = ExtResource("3_c8h33")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_thread_group = 1
 process_thread_group_order = 1
@@ -83,4 +129,6 @@ bus = &"Music"
 
 [node name="BG" parent="." instance=ExtResource("9_fqh7i")]
 
-[connection signal="pressed" from="Buttons/B_Exit" to="." method="_on_b_exit_pressed"]
+[connection signal="pressed" from="Main/Buttons/B_Exit" to="." method="_on_b_exit_pressed"]
+[connection signal="pressed" from="Settings/B_Back" to="." method="_on_b_exit_pressed"]
+[connection signal="pressed" from="Settings/B_SaveSettings" to="." method="_on_b_exit_pressed"]
