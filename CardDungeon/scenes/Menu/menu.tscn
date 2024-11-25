@@ -1,15 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://dl1qtmqhal033"]
+[gd_scene load_steps=18 format=3 uid="uid://dl1qtmqhal033"]
 
 [ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="1_mh6pt"]
 [ext_resource type="Script" path="res://scenes/Menu/Menu.cs" id="1_x5ddw"]
 [ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/Settings.png" id="2_1wk4u"]
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="3_c8h33"]
+[ext_resource type="Texture2D" uid="uid://bimrsshbo28vf" path="res://Photos/newgame.png" id="4_5514m"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="4_khwt1"]
 [ext_resource type="Texture2D" uid="uid://0v6tcg1irfjx" path="res://Photos/shield.png" id="5_8j8yi"]
 [ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/Back.png" id="6_0kuck"]
 [ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/GALKA.png" id="7_4gwhv"]
 [ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="7_11yh3"]
+[ext_resource type="Texture2D" uid="uid://dp34kragf88oq" path="res://Photos/white_sqr.png" id="8_bbk33"]
 [ext_resource type="PackedScene" uid="uid://dqpfk78ur2uew" path="res://scenes/Menu/bg.tscn" id="9_fqh7i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_on556"]
+font = ExtResource("4_khwt1")
+font_size = 44
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7kdm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_orqkk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_scu0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lemt"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_x5ddw")
@@ -31,11 +45,12 @@ theme_override_colors/font_pressed_color = Color(0.548634, 0.129873, 0.207966, 1
 theme_override_colors/font_color = Color(0.773728, 0.376146, 0.508055, 1)
 theme_override_fonts/font = ExtResource("4_khwt1")
 theme_override_font_sizes/font_size = 40
+disabled = true
 action_mode = 0
 text = "ПРОДОЛЖИТЬ"
 icon = ExtResource("1_mh6pt")
 
-[node name="B_Start" type="Button" parent="Main/Buttons"]
+[node name="B_NewGame" type="Button" parent="Main/Buttons"]
 texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0.548634, 0.129873, 0.207966, 1)
@@ -45,7 +60,7 @@ theme_override_font_sizes/font_size = 40
 action_mode = 0
 text = "НОВАЯ ИГРА
 "
-icon = ExtResource("1_mh6pt")
+icon = ExtResource("4_5514m")
 
 [node name="B_Settings" type="Button" parent="Main/Buttons"]
 texture_filter = 1
@@ -69,6 +84,7 @@ text = "ВЫХОД"
 icon = ExtResource("3_c8h33")
 
 [node name="Settings" type="Node2D" parent="."]
+visible = false
 
 [node name="B_Back" type="Button" parent="Settings"]
 texture_filter = 1
@@ -98,7 +114,80 @@ text = "СОХРАНИТЬ
 icon = ExtResource("7_4gwhv")
 icon_alignment = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="Scr_Music" type="HScrollBar" parent="Settings"]
+custom_minimum_size = Vector2(300, 40)
+offset_left = 207.0
+offset_top = 294.0
+offset_right = 507.0
+offset_bottom = 338.0
+min_value = -60.0
+max_value = 3.0
+value = 3.0
+
+[node name="Label_Music" type="Label" parent="Settings/Scr_Music"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 85.0
+offset_top = -49.0
+offset_right = 217.0
+offset_bottom = -4.0
+text = "МУЗЫКА"
+label_settings = SubResource("LabelSettings_on556")
+horizontal_alignment = 1
+
+[node name="Scr_Sound" type="HScrollBar" parent="Settings"]
+custom_minimum_size = Vector2(300, 40)
+offset_left = 207.0
+offset_top = 407.0
+offset_right = 507.0
+offset_bottom = 451.0
+value = 100.0
+
+[node name="Label_Sound" type="Label" parent="Settings/Scr_Sound"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 85.0
+offset_top = -49.0
+offset_right = 217.0
+offset_bottom = -4.0
+text = "ЗВУК"
+label_settings = SubResource("LabelSettings_on556")
+horizontal_alignment = 1
+
+[node name="B_FullScreen" type="CheckButton" parent="Settings"]
+texture_filter = 1
+offset_left = 561.0
+offset_top = 328.0
+offset_right = 693.0
+offset_bottom = 352.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("4_khwt1")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a7kdm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_orqkk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_scu0j")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_0lemt")
+button_pressed = true
+text = "полный экран"
+alignment = 2
+
+[node name="white_sqr" type="Sprite2D" parent="Settings"]
+modulate = Color(1, 1, 1, 0.345098)
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(360, 351)
+scale = Vector2(3.27239, 2.386)
+texture = ExtResource("8_bbk33")
+
+[node name="white_sqr2" type="Sprite2D" parent="Settings"]
+modulate = Color(1, 1, 1, 0.345098)
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(755, 367)
+scale = Vector2(3.67981, -0.637794)
+texture = ExtResource("8_bbk33")
+
+[node name="Super_Name_Game" type="Label" parent="."]
 offset_left = 256.0
 offset_top = 57.0
 offset_right = 907.0
@@ -109,17 +198,17 @@ theme_override_fonts/font = ExtResource("4_khwt1")
 theme_override_font_sizes/font_size = 130
 text = "CARD DUNGEON"
 
-[node name="Shield1" type="Sprite2D" parent="Label"]
+[node name="Shield1" type="Sprite2D" parent="Super_Name_Game"]
 position = Vector2(-105, 64)
 scale = Vector2(0.912, 0.912)
 texture = ExtResource("5_8j8yi")
 
-[node name="Shield2" type="Sprite2D" parent="Label"]
+[node name="Shield2" type="Sprite2D" parent="Super_Name_Game"]
 position = Vector2(744, 64)
 scale = Vector2(0.912109, 0.912109)
 texture = ExtResource("5_8j8yi")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 process_thread_group = 1
 process_thread_group_order = 1
 process_thread_messages = 0
@@ -129,6 +218,8 @@ bus = &"Music"
 
 [node name="BG" parent="." instance=ExtResource("9_fqh7i")]
 
+[connection signal="pressed" from="Main/Buttons/B_Settings" to="." method="_on_b_settings_pressed"]
 [connection signal="pressed" from="Main/Buttons/B_Exit" to="." method="_on_b_exit_pressed"]
-[connection signal="pressed" from="Settings/B_Back" to="." method="_on_b_exit_pressed"]
-[connection signal="pressed" from="Settings/B_SaveSettings" to="." method="_on_b_exit_pressed"]
+[connection signal="pressed" from="Settings/B_Back" to="." method="_on_b_back_pressed"]
+[connection signal="value_changed" from="Settings/Scr_Music" to="." method="_on_scr_music_value_changed"]
+[connection signal="toggled" from="Settings/B_FullScreen" to="." method="_on_b_full_screen_toggled"]
