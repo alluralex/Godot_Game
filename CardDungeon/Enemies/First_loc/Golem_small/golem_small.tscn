@@ -290,7 +290,7 @@ animations = [{
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
 
-[node name="GS_Enemie" type="AnimatedSprite2D" parent="."]
+[node name="GS_Enemy" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ypxuj")
 animation = &"walk"
 frame_progress = 0.625024

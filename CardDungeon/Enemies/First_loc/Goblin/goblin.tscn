@@ -240,7 +240,7 @@ animations = [{
 [node name="Goblin" type="CharacterBody2D"]
 texture_filter = 1
 
-[node name="G_Enemie" type="AnimatedSprite2D" parent="."]
+[node name="G_Enemy" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fedwk")
 animation = &"walk"
 frame_progress = 0.508727

@@ -199,7 +199,7 @@ animations = [{
 [node name="Flying eye" type="CharacterBody2D"]
 texture_filter = 1
 
-[node name="FE_Enemie" type="AnimatedSprite2D" parent="."]
+[node name="FE_Enemy" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3ifrn")
 animation = &"idle+fly"
 frame_progress = 0.167418

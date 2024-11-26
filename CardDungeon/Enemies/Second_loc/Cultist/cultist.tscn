@@ -1,0 +1,142 @@
+[gd_scene load_steps=28 format=3 uid="uid://d1trvqptneiiq"]
+
+[ext_resource type="Texture2D" uid="uid://71n3eqbfjfvj" path="res://Enemies/Second_loc/Cultist/Sprites/attack/cultist_priest_attack_1.png" id="1_1lmyx"]
+[ext_resource type="Texture2D" uid="uid://2w3omd2umdrw" path="res://Enemies/Second_loc/Cultist/Sprites/attack/cultist_priest_attack_2.png" id="2_djou4"]
+[ext_resource type="Texture2D" uid="uid://cwsmmicjnyb7e" path="res://Enemies/Second_loc/Cultist/Sprites/attack/cultist_priest_attack_3.png" id="3_erc86"]
+[ext_resource type="Texture2D" uid="uid://8gjexi5owbtf" path="res://Enemies/Second_loc/Cultist/Sprites/attack/cultist_priest_attack_4.png" id="4_7k8cq"]
+[ext_resource type="Texture2D" uid="uid://d3gjbf4d3ye55" path="res://Enemies/Second_loc/Cultist/Sprites/attack/cultist_priest_attack_5.png" id="5_m588g"]
+[ext_resource type="Texture2D" uid="uid://by7meggwosusr" path="res://Enemies/Second_loc/Cultist/Sprites/die/cultist_priest_die_1.png" id="6_ptpfs"]
+[ext_resource type="Texture2D" uid="uid://cvyes3i84txpy" path="res://Enemies/Second_loc/Cultist/Sprites/die/cultist_priest_die_2.png" id="7_5r127"]
+[ext_resource type="Texture2D" uid="uid://iwi41fhblecc" path="res://Enemies/Second_loc/Cultist/Sprites/die/cultist_priest_die_3.png" id="8_1r6c7"]
+[ext_resource type="Texture2D" uid="uid://cw0f2y08s7nxo" path="res://Enemies/Second_loc/Cultist/Sprites/die/cultist_priest_die_4.png" id="9_iscdu"]
+[ext_resource type="Texture2D" uid="uid://dib0vi82l7mku" path="res://Enemies/Second_loc/Cultist/Sprites/die/cultist_priest_die_5.png" id="10_o8xyu"]
+[ext_resource type="Texture2D" uid="uid://bsy2yxfd38bs7" path="res://Enemies/Second_loc/Cultist/Sprites/die/cultist_priest_die_6.png" id="11_ldc5i"]
+[ext_resource type="Texture2D" uid="uid://eqn5ijard6c1" path="res://Enemies/Second_loc/Cultist/Sprites/hit/cultist_priest_takehit_1.png" id="12_oeplp"]
+[ext_resource type="Texture2D" uid="uid://b2cieicnvobux" path="res://Enemies/Second_loc/Cultist/Sprites/hit/cultist_priest_takehit_2.png" id="13_sd5nq"]
+[ext_resource type="Texture2D" uid="uid://b6uusd5ohw6my" path="res://Enemies/Second_loc/Cultist/Sprites/hit/cultist_priest_takehit_3.png" id="14_d255e"]
+[ext_resource type="Texture2D" uid="uid://ugbqm1shpau8" path="res://Enemies/Second_loc/Cultist/Sprites/hit/cultist_priest_takehit_4.png" id="15_eod6l"]
+[ext_resource type="Texture2D" uid="uid://ci4f0ypqf6sev" path="res://Enemies/Second_loc/Cultist/Sprites/idle/cultist_priest_idle_1.png" id="16_kwig1"]
+[ext_resource type="Texture2D" uid="uid://b5xyh2d6fwai" path="res://Enemies/Second_loc/Cultist/Sprites/idle/cultist_priest_idle_2.png" id="17_1r1ff"]
+[ext_resource type="Texture2D" uid="uid://cwxwuncknlukf" path="res://Enemies/Second_loc/Cultist/Sprites/idle/cultist_priest_idle_3.png" id="18_702iv"]
+[ext_resource type="Texture2D" uid="uid://gv3t6m87g3md" path="res://Enemies/Second_loc/Cultist/Sprites/idle/cultist_priest_idle_4.png" id="19_bchi8"]
+[ext_resource type="Texture2D" uid="uid://bttuq0wtemkag" path="res://Enemies/Second_loc/Cultist/Sprites/idle/cultist_priest_idle_5.png" id="20_h6nwn"]
+[ext_resource type="Texture2D" uid="uid://s18j5ax32a6m" path="res://Enemies/Second_loc/Cultist/Sprites/walk/cultist_priest_walk_1.png" id="21_eo77y"]
+[ext_resource type="Texture2D" uid="uid://cv7t5u0sclenk" path="res://Enemies/Second_loc/Cultist/Sprites/walk/cultist_priest_walk_2.png" id="22_5btuo"]
+[ext_resource type="Texture2D" uid="uid://bcirird7o8464" path="res://Enemies/Second_loc/Cultist/Sprites/walk/cultist_priest_walk_3.png" id="23_q4k2u"]
+[ext_resource type="Texture2D" uid="uid://cqmcm5qbu672h" path="res://Enemies/Second_loc/Cultist/Sprites/walk/cultist_priest_walk_4.png" id="24_ske17"]
+[ext_resource type="Texture2D" uid="uid://dctrso5v1llhl" path="res://Enemies/Second_loc/Cultist/Sprites/walk/cultist_priest_walk_5.png" id="25_r28kl"]
+[ext_resource type="Texture2D" uid="uid://bm0b6cb417g7" path="res://Enemies/Second_loc/Cultist/Sprites/walk/cultist_priest_walk_6.png" id="26_4oaij"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyv1g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1lmyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_djou4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_erc86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7k8cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_m588g")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ptpfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5r127")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1r6c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iscdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_o8xyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ldc5i")
+}],
+"loop": true,
+"name": &"die",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_oeplp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sd5nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d255e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eod6l")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_kwig1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1r1ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_702iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bchi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_h6nwn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_eo77y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5btuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_q4k2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ske17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_r28kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4oaij")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[node name="Cultist" type="CharacterBody2D"]
+texture_filter = 1
+
+[node name="C_Enemy" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iyv1g")
+animation = &"Attack"
+frame_progress = 0.364319

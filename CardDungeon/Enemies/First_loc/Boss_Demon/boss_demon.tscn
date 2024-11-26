@@ -453,7 +453,7 @@ animations = [{
 [node name="Boss_Demon" type="CharacterBody2D"]
 texture_filter = 1
 
-[node name="BD_Monster" type="AnimatedSprite2D" parent="."]
+[node name="BD_Enemy" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tjr0i")
 animation = &"attack"
