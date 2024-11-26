@@ -221,5 +221,6 @@ bus = &"Music"
 [connection signal="pressed" from="Main/Buttons/B_Settings" to="." method="_on_b_settings_pressed"]
 [connection signal="pressed" from="Main/Buttons/B_Exit" to="." method="_on_b_exit_pressed"]
 [connection signal="pressed" from="Settings/B_Back" to="." method="_on_b_back_pressed"]
+[connection signal="pressed" from="Settings/B_SaveSettings" to="." method="_on_b_save_settings_pressed"]
 [connection signal="value_changed" from="Settings/Scr_Music" to="." method="_on_scr_music_value_changed"]
 [connection signal="toggled" from="Settings/B_FullScreen" to="." method="_on_b_full_screen_toggled"]
