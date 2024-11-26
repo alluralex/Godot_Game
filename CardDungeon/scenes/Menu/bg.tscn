@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqpfk78ur2uew"]
 
 [ext_resource type="Script" path="res://scenes/Menu/Bg.cs" id="1_elefi"]
-[ext_resource type="Texture2D" uid="uid://7yfdqw552w8g" path="res://BackGrounds/background1.png" id="1_ij3en"]
-[ext_resource type="Texture2D" uid="uid://b3amtnswds7dn" path="res://BackGrounds/background2.png" id="2_pirik"]
-[ext_resource type="Texture2D" uid="uid://gpa3twa4nmr8" path="res://BackGrounds/background3.png" id="3_w2jpc"]
+[ext_resource type="Texture2D" uid="uid://7yfdqw552w8g" path="res://BackGrounds/Menu/background1.png" id="1_ij3en"]
+[ext_resource type="Texture2D" uid="uid://b3amtnswds7dn" path="res://BackGrounds/Menu/background2.png" id="2_pirik"]
+[ext_resource type="Texture2D" uid="uid://gpa3twa4nmr8" path="res://BackGrounds/Menu/background3.png" id="3_w2jpc"]
 
 [node name="BG" type="ParallaxBackground"]
 script = ExtResource("1_elefi")

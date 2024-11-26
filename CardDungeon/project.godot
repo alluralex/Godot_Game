@@ -17,7 +17,6 @@ config/icon="res://Photos/icon.svg"
 
 [display]
 
-window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
@@ -29,6 +28,11 @@ project/assembly_name="Сохранялкагодота"
 [file_customization]
 
 folder_colors={
+"res://BackGrounds/Menu/": "teal",
+"res://Enemies/First_loc/": "green",
+"res://Enemies/First_loc/Boss_Demon/": "red",
+"res://Enemies/Second_loc/": "yellow",
+"res://Enemies/Second_loc/FireWorm/": "red",
 "res://Heroes/Mage/": "purple",
 "res://Heroes/Warrior/": "red"
 }
