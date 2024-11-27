@@ -13,7 +13,7 @@ config_version=5
 config/name="Сохранялкагодота"
 run/main_scene="res://scenes/Menu/menu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
-config/icon="res://Photos/icon.svg"
+config/icon="res://Photos/shield.png"
 
 [display]
 

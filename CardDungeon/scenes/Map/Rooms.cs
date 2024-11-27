@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using Сохранялкагодота.scenes.Map;
 
 public partial class Rooms : Node
 {
@@ -14,42 +15,42 @@ public partial class Rooms : Node
     {
         public Start()
         {
-            Name = "Стартовая локация.";
+            Name = "StartLocation";
         }
     }
     public class Campfire : Room
     {
         public Campfire()
         {
-            Name = "Костёр.";
+            Name = "Campfire";
         }
     }
     public class EventRoom : Room
     {
         public EventRoom()
         {
-            Name = "Комната события.";
+            Name = "EventRoom";
         }
     }
     public class BattleRoom : Room
     {
         public BattleRoom()
         {
-            Name = "Комната с монстрами.";
+            Name = "RoomWithenemy";
         }
     }
     public class TreasureRoom : Room
     {
         public TreasureRoom()
         {
-            Name = "Сокровищница.";
+            Name = "TreasureRoom";
         }
     }
     public class Shop : Room
     {
         public Shop()
         {
-            Name = "Лавка.";
+            Name = "Shop";
         }
     }
     public class Secret : Room
@@ -67,7 +68,7 @@ public partial class Rooms : Node
     {
         public BossRoom()
         {
-            Name = "Комната с боссом.";
+            Name = "BossRoom";
         }
     }
 
@@ -84,3 +85,4 @@ public partial class Rooms : Node
 	{
 	}
 }
+
