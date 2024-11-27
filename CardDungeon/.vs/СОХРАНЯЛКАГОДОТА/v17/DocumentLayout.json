@@ -1,18 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\",
+  "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\alex\\desktop\\godot_creations\\godot_game\\carddungeon\\scenes\\menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\student\\documents\\github\\godot_game\\carddungeon\\scenes\\map\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:scenes\\map\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\student\\documents\\github\\godot_game\\carddungeon\\scenes\\map\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:scenes\\map\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\student\\documents\\github\\godot_game\\carddungeon\\scenes\\menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:scenes\\menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\alex\\desktop\\godot_creations\\godot_game\\carddungeon\\scenes\\menu\\resolutions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\student\\documents\\github\\godot_game\\carddungeon\\scenes\\menu\\resolutions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39CA0AD8-EC80-4434-A069-148054D1461E}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:scenes\\menu\\resolutions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Heroes\\Warrior\\HeroWarrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +29,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "resolutions.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Menu\\resolutions.cs",
-              "RelativeDocumentMoniker": "scenes\\Menu\\resolutions.cs",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Menu\\resolutions.cs",
-              "RelativeToolTip": "scenes\\Menu\\resolutions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Map\\Map.cs",
+              "RelativeDocumentMoniker": "scenes\\Map\\Map.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Map\\Map.cs",
+              "RelativeToolTip": "scenes\\Map\\Map.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T07:28:04.198Z",
+              "WhenOpened": "2024-11-27T06:11:00.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Rooms.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Map\\Rooms.cs",
+              "RelativeDocumentMoniker": "scenes\\Map\\Rooms.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Map\\Rooms.cs",
+              "RelativeToolTip": "scenes\\Map\\Rooms.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T06:10:54.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "resolutions.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Menu\\resolutions.cs",
+              "RelativeDocumentMoniker": "scenes\\Menu\\resolutions.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Menu\\resolutions.cs",
+              "RelativeToolTip": "scenes\\Menu\\resolutions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:28:04.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "HeroWarrior.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs",
-              "RelativeDocumentMoniker": "Heroes\\Warrior\\HeroWarrior.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs",
               "ToolTip": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs",
-              "RelativeToolTip": "Heroes\\Warrior\\HeroWarrior.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Heroes\\Warrior\\HeroWarrior.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T06:28:55.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Menu\\Menu.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Menu\\Menu.cs",
               "RelativeDocumentMoniker": "scenes\\Menu\\Menu.cs",
-              "ToolTip": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Menu\\Menu.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Godot_Game\\CardDungeon\\scenes\\Menu\\Menu.cs",
               "RelativeToolTip": "scenes\\Menu\\Menu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
