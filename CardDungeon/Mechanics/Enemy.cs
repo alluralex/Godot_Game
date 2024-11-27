@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Сохранялкагодота.scenes.Map
+namespace CardDungeonGame.scenes.Map
 {
 	public class Enemy
 	{
@@ -23,7 +23,7 @@ namespace Сохранялкагодота.scenes.Map
 	{
 		public int Id { get; set; }
 
-		public string Title { get; set; }
+		public string Title { get; set; }  = "hoho";
 
 		public string Description { get; set; }
 

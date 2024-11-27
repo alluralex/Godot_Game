@@ -1,7 +1,7 @@
+using CardDungeonGame.scenes.Map;
 using Godot;
 using System;
 using System.Collections.Generic;
-using Сохранялкагодота.scenes.Map;
 
 public partial class Rooms : Node
 {
@@ -71,7 +71,6 @@ public partial class Rooms : Node
             Name = "BossRoom";
         }
     }
-
 
     public static List<Room> AllRooms = new List<Room> { new Start(),  new Campfire(), new Shop(), new TreasureRoom(), new BattleRoom(), new EventRoom(), new Secret(), new BossRoom()};
 
