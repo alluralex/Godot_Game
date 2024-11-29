@@ -188,6 +188,7 @@ scale = Vector2(3.67981, -0.637794)
 texture = ExtResource("8_bbk33")
 
 [node name="Super_Name_Game" type="Label" parent="."]
+texture_filter = 1
 offset_left = 256.0
 offset_top = 57.0
 offset_right = 907.0
