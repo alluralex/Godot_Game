@@ -15,42 +15,42 @@ public partial class Rooms : Node
 	{
 		public Start()
 		{
-			Name = "StartLocation";
+			Name = "Начальная локация";
 		}
 	}
 	public class Campfire : Room
 	{
 		public Campfire()
 		{
-			Name = "Campfire";
+			Name = "Костёр";
 		}
 	}
 	public class EventRoom : Room
 	{
 		public EventRoom()
 		{
-			Name = "EventRoom";
+			Name = "Комната с событием";
 		}
 	}
 	public class BattleRoom : Room
 	{
 		public BattleRoom()
 		{
-			Name = "RoomWithenemy";
+			Name = "Комната с монстром";
 		}
 	}
 	public class TreasureRoom : Room
 	{
 		public TreasureRoom()
 		{
-			Name = "TreasureRoom";
+			Name = "Комната с сокровищами";
 		}
 	}
 	public class Shop : Room
 	{
 		public Shop()
 		{
-			Name = "Shop";
+			Name = "Магазин";
 		}
 	}
 	public class Secret : Room
@@ -68,7 +68,7 @@ public partial class Rooms : Node
 	{
 		public BossRoom()
 		{
-			Name = "BossRoom";
+			Name = "Комната с боссом";
 		}
 	}
 
