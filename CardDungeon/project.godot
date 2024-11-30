@@ -33,6 +33,7 @@ folder_colors={
 "res://Enemies/First_loc/Boss_Demon/": "red",
 "res://Enemies/Second_loc/": "yellow",
 "res://Enemies/Second_loc/FireWorm/": "red",
+"res://Heroes/Archer/": "green",
 "res://Heroes/Mage/": "purple",
 "res://Heroes/Warrior/": "red"
 }
