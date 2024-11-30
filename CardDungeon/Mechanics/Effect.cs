@@ -65,7 +65,6 @@ namespace Сохранялкагодота.Mechanics
         {
             Title = "Увернуться";
 
-
             DodgeScore = score;
         }
     }

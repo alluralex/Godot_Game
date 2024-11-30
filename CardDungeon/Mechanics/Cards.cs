@@ -36,7 +36,7 @@ namespace Сохранялкагодота.Mechanics
 
         public List<Effect> Effects { get; set; }
 
-        public virtual void Use(Creature creature)
+        public virtual void Use(Creature dealer, Creature target)
         {
             return;
         }
@@ -55,7 +55,7 @@ namespace Сохранялкагодота.Mechanics
             DealDamage = 8;
             DealArmor = 0;
         }
-        public override void Use(Creature creature)
+        public override void Use(Creature dealer, Creature target)
         {
             return;
         }
@@ -89,121 +89,149 @@ namespace Сохранялкагодота.Mechanics
             DealArmor = 0;
             Effects.Add(new Stun_Effect(1));
         }
-    }
-
-    public class Warrior_FastAttack_Bronze : Card
-    {
-
-        public Warrior_FastAttack_Bronze()
+        public override void Use(Creature dealer, Creature target)
         {
-            Title = "Быстрая атака";
-            Description = $"Наносит {DealDamage} урона, не требует энергию";
-            Type = AttackType;
-            Rarity = Bronze;
-            EnergyCost = 0;
-            DealDamage = 4;
-            DealArmor = 0;
+            if (target.CurrentArmor > 0)
+            {
+                for (int i = (int)DealDamage; i < target.CurrentArmor; i++)
+                {
+                    target.CurrentArmor--;
+                    DealDamage--;
+                }
+            }
+            target.CurrentHealth -= (int)DealDamage;
         }
-    }
 
-    public class Warrior_Anger_Bronze : Card
-    {
-
-        public Warrior_Anger_Bronze()
+        public class Warrior_FastAttack_Bronze : Card
         {
-            Title = "Ярость";
-            Description = "Восстанавливает 1 энергию";
-            Type = SkillType;
-            Rarity = Bronze;
-            EnergyCost = -1;
-            DealDamage = 0;
-            DealArmor = 0;
+
+            public Warrior_FastAttack_Bronze()
+            {
+                Title = "Быстрая атака";
+                Description = $"Наносит {DealDamage} урона, не требует энергию";
+                Type = AttackType;
+                Rarity = Bronze;
+                EnergyCost = 0;
+                DealDamage = 4;
+                DealArmor = 0;
+            }
+            public override void Use(Creature dealer, Creature target)
+            {
+                target.CurrentHealth -= (int)DealDamage;
+            }
         }
-    }
 
-    public class Warrior_Dodge_Iron : Card
-    {
-        public Warrior_Dodge_Iron()
+        public class Warrior_Anger_Bronze : Card
         {
-            Title = "Уворот";
-            Description = "Вы можете увернуться от 2 следующих атак";
-            Type = SkillType;
-            Rarity = Iron;
-            EnergyCost = 1;
-            DealDamage = 0;
-            DealArmor = 0;
-            Effects.Add(new Dodge_Effect(2));
-        }
-    }
 
-    public class Warrior_ShieldStrike_Iron : Card
-    {
-        public Warrior_ShieldStrike_Iron()
-        {
-            Title = "Удар щитом";
-            Description = "Вы бьёте щитом, теряете всю броню и наносите 50% от её значения";
-            Type = AttackType;
-            Rarity = Iron;
-            EnergyCost = 1;
-            //ТУТ БЕДААААА ХЗ ШО ДЕЛАТЬ)))
-            DealDamage = 0;
-            DealArmor = 0;
+            public Warrior_Anger_Bronze()
+            {
+                Title = "Ярость";
+                Description = "Восстанавливает 1 энергию";
+                Type = SkillType;
+                Rarity = Bronze;
+                EnergyCost = -1;
+                DealDamage = 0;
+                DealArmor = 0;
+            }
         }
-    }
-    public class Warrior_Cutting_Iron : Card
-    {
-        public Warrior_Cutting_Iron()
-        {
-            Title = "Разрезание";
-            Description = $"Вы наносите {DealDamage} все противникам";
-            Type = AttackType;
-            Rarity = Iron;
-            EnergyCost = 2;
-            DealDamage = 12;
-            DealArmor = 0;
-        }
-    }
 
-    public class Warrior_Parrying_Gold : Card
-    {
-        public Warrior_Parrying_Gold()
+        public class Warrior_Dodge_Iron : Card
         {
-            Title = "Парирование";
-            Description = $"Вы блокируете 75% урона и наносите противнику 25% от его атаки";
-            Type = DefenceType;
-            Rarity = Gold;
-            EnergyCost = 2;
-            DealDamage = 0;
-            DealArmor = 0;
-        }
-    }
+            public Warrior_Dodge_Iron()
+            {
+                Title = "Уворот";
+                Description = "Вы можете увернуться от 2 следующих атак";
+                Type = SkillType;
+                Rarity = Iron;
+                EnergyCost = 1;
+                DealDamage = 0;
+                DealArmor = 0;
+                Effects.Add(new Dodge_Effect(2));
+            }
 
-    public class Warrior_Scare_Gold : Card
-    {
-        public Warrior_Scare_Gold()
-        {
-            Title = "Запугивание";
-            Description = $"Вы запугиваете противника на 1 ход (элитных противников с шансом 30%)";
-            Type = SkillType;
-            Rarity = Gold;
-            EnergyCost = 1;
-            DealDamage = 0;
-            DealArmor = 0;
-            Effects.Add(new Scare_Effect(1));
-        }
-    }
 
-    public class Warrior_Berserk_Diamond : Card
-    {
-        public Warrior_Berserk_Diamond()
+        }
+
+        public class Warrior_ShieldStrike_Iron : Card
         {
-            Title = "Разрезание";
-            Description = $"Вы восстанавливаете всю свою энергию, но теряете всю броню";
-            Type = SkillType;
-            Rarity = Diamond;
-            EnergyCost = 0;
-            DealDamage = 0;
-            DealArmor = 0;
+            public Warrior_ShieldStrike_Iron()
+            {
+                Title = "Удар щитом";
+                Description = "Вы бьёте щитом, теряете всю броню и наносите 50% от её значения";
+                Type = AttackType;
+                Rarity = Iron;
+                EnergyCost = 1;
+                //ТУТ БЕДААААА ХЗ ШО ДЕЛАТЬ)))
+                DealDamage = 0;
+                DealArmor = 0;
+
+            }
+            public override void Use(Creature dealer, Creature target)
+            {
+                target.TakeDamage((int)dealer.CurrentArmor / 2);
+                dealer.CurrentArmor = 0;
+            }
+        }
+        public class Warrior_Cutting_Iron : Card
+        {
+            public Warrior_Cutting_Iron()
+            {
+                Title = "Разрезание";
+                Description = $"Вы наносите {DealDamage} все противникам";
+                Type = AttackType;
+                Rarity = Iron;
+                EnergyCost = 2;
+                DealDamage = 12;
+                DealArmor = 0;
+            }
+            public override void Use(Creature dealer, Creature target)
+            {
+                target.TakeDamage();
+            }
+        }
+
+        public class Warrior_Parrying_Gold : Card
+        {
+            public Warrior_Parrying_Gold()
+            {
+                Title = "Парирование";
+                Description = $"Вы блокируете 75% урона и наносите противнику 25% от его атаки";
+                Type = DefenceType;
+                Rarity = Gold;
+                EnergyCost = 2;
+                DealDamage = 0;
+                DealArmor = 0;
+            }
+        }
+
+        public class Warrior_Scare_Gold : Card
+        {
+            public Warrior_Scare_Gold()
+            {
+                Title = "Запугивание";
+                Description = $"Вы запугиваете противника на 1 ход (элитных противников с шансом 30%)";
+                Type = SkillType;
+                Rarity = Gold;
+                EnergyCost = 1;
+                DealDamage = 0;
+                DealArmor = 0;
+                Effects.Add(new Scare_Effect(1));
+            }
+        }
+
+        public class Warrior_Berserk_Diamond : Card
+        {
+            public Warrior_Berserk_Diamond()
+            {
+                Title = "Разрезание";
+                Description = $"Вы восстанавливаете всю свою энергию, но теряете всю броню";
+                Type = SkillType;
+                Rarity = Diamond;
+                EnergyCost = 0;
+                DealDamage = 0;
+                DealArmor = 0;
+            }
         }
     }
 }
