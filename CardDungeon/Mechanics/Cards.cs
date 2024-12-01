@@ -1,4 +1,5 @@
 using CardDungeonGame.scenes.Map;
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +17,24 @@ namespace Сохранялкагодота.Mechanics
         public const int Gold = 3;
         public const int Diamond = 4;
 
-        public const int AttackType = 1;
-        public const int DefenceType = 2;
-        public const int SkillType = 3;
+        public const string AttackType = "АТАКА";
+        public const string DefenceType = "ЗАЩИТА";
+        public const string SkillType = "НАВЫК";
+
+        public const string Enemy = "МОНСТР";
+        public const string Warrior = "ВОИН";
+        public const string Mage = "МАГ";
+        public const string Archer = "ЛУЧНИК";
 
         public string Title { get; set; }
 
         public string Description { get; set; }
 
-        public int Type { get; set; }
+        public string Class { get; set; }
+
+        public string Type { get; set; }
+
+        public Texture Image { get; set; }
 
         public int Rarity { get; set; }
 
@@ -34,7 +44,7 @@ namespace Сохранялкагодота.Mechanics
 
         public int? DealArmor { get; set; }
 
-        public List<Effect> Effects { get; set; }
+        public List<Effect>? Effects { get; set; }
 
         public virtual void Use(Creature dealer, Creature target)
         {
@@ -54,6 +64,7 @@ namespace Сохранялкагодота.Mechanics
             EnergyCost = 1;
             DealDamage = 8;
             DealArmor = 0;
+            Class = Warrior;
         }
         public override void Use(Creature dealer, Creature target)
         {
@@ -72,6 +83,7 @@ namespace Сохранялкагодота.Mechanics
             EnergyCost = 1;
             DealDamage = 0;
             DealArmor = 6;
+            Class = Warrior;
         }
     }
 
@@ -87,6 +99,7 @@ namespace Сохранялкагодота.Mechanics
             EnergyCost = 2;
             DealDamage = 6;
             DealArmor = 0;
+            Class = Warrior;
             Effects.Add(new Stun_Effect(1));
         }
         public override void Use(Creature dealer, Creature target)
@@ -114,6 +127,7 @@ namespace Сохранялкагодота.Mechanics
                 EnergyCost = 0;
                 DealDamage = 4;
                 DealArmor = 0;
+                Class = Warrior;
             }
             public override void Use(Creature dealer, Creature target)
             {
@@ -133,6 +147,7 @@ namespace Сохранялкагодота.Mechanics
                 EnergyCost = -1;
                 DealDamage = 0;
                 DealArmor = 0;
+                Class = Warrior;
             }
         }
 
@@ -147,6 +162,7 @@ namespace Сохранялкагодота.Mechanics
                 EnergyCost = 1;
                 DealDamage = 0;
                 DealArmor = 0;
+                Class = Warrior;
                 Effects.Add(new Dodge_Effect(2));
             }
 
@@ -165,7 +181,7 @@ namespace Сохранялкагодота.Mechanics
                 //ТУТ БЕДААААА ХЗ ШО ДЕЛАТЬ)))
                 DealDamage = 0;
                 DealArmor = 0;
-
+                Class = Warrior;
             }
             public override void Use(Creature dealer, Creature target)
             {
@@ -184,10 +200,11 @@ namespace Сохранялкагодота.Mechanics
                 EnergyCost = 2;
                 DealDamage = 12;
                 DealArmor = 0;
+                Class = Warrior;
             }
             public override void Use(Creature dealer, Creature target)
             {
-                target.TakeDamage();
+
             }
         }
 
@@ -202,6 +219,7 @@ namespace Сохранялкагодота.Mechanics
                 EnergyCost = 2;
                 DealDamage = 0;
                 DealArmor = 0;
+                Class = Warrior;
             }
         }
 
@@ -216,6 +234,7 @@ namespace Сохранялкагодота.Mechanics
                 EnergyCost = 1;
                 DealDamage = 0;
                 DealArmor = 0;
+                Class = Warrior;
                 Effects.Add(new Scare_Effect(1));
             }
         }
@@ -231,6 +250,7 @@ namespace Сохранялкагодота.Mechanics
                 EnergyCost = 0;
                 DealDamage = 0;
                 DealArmor = 0;
+                Class = Warrior;
             }
         }
     }

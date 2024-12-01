@@ -55,7 +55,14 @@ public partial class Menu : Node2D
 			GetTree().Root.Mode = Window.ModeEnum.Windowed;
 		}
 	}
-	private void _on_b_save_settings_pressed()
+
+	private void _on_b_new_game_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://Mechanics/test_card.tscn");
+	}
+
+
+    private void _on_b_save_settings_pressed()
 	{
 		var config = new ConfigFile();
 		

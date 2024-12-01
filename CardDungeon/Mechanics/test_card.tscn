@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0vkovprfmcs3"]
+
+[ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="1_tw3y3"]
+[ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="2_ndmvw"]
+[ext_resource type="Script" path="res://Mechanics/TestCard.cs" id="2_wwodg"]
+[ext_resource type="Texture2D" uid="uid://bhh4d2otnm4h1" path="res://Enemies/Second_loc/Evil_Eye/Sprites/attack/Eye Beast Attack1.png" id="3_yapu8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bo2l0"]
+font = ExtResource("2_ndmvw")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_nn3q6"]
+font = ExtResource("2_ndmvw")
+font_size = 31
+
+[sub_resource type="LabelSettings" id="LabelSettings_ouk2j"]
+font = ExtResource("2_ndmvw")
+font_size = 21
+
+[sub_resource type="LabelSettings" id="LabelSettings_q87t0"]
+font = ExtResource("2_ndmvw")
+font_size = 22
+
+[node name="Test_Card" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(402, 203)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tw3y3")
+script = ExtResource("2_wwodg")
+
+[node name="Class" type="Label" parent="."]
+texture_filter = 1
+offset_left = -129.0
+offset_top = -312.0
+offset_right = 129.0
+offset_bottom = -289.0
+text = "TEST"
+label_settings = SubResource("LabelSettings_bo2l0")
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+texture_filter = 1
+offset_left = -120.0
+offset_top = -287.0
+offset_right = 122.0
+offset_bottom = -253.0
+text = "TEST"
+label_settings = SubResource("LabelSettings_nn3q6")
+horizontal_alignment = 1
+
+[node name="Type" type="Label" parent="."]
+texture_filter = 1
+offset_left = -61.0
+offset_top = 106.0
+offset_right = 62.0
+offset_bottom = 127.0
+text = "TEST
+"
+label_settings = SubResource("LabelSettings_ouk2j")
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="."]
+texture_filter = 1
+offset_left = -140.0
+offset_top = 136.0
+offset_right = 141.0
+offset_bottom = 208.0
+text = "Я ТАЛАНТ"
+label_settings = SubResource("LabelSettings_q87t0")
+
+[node name="Image_C" type="Sprite2D" parent="."]
+position = Vector2(0, -93)
+scale = Vector2(5, 5)
+texture = ExtResource("3_yapu8")

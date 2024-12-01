@@ -219,6 +219,7 @@ bus = &"Music"
 
 [node name="BG" parent="." instance=ExtResource("9_fqh7i")]
 
+[connection signal="pressed" from="Main/Buttons/B_NewGame" to="." method="_on_b_new_game_pressed"]
 [connection signal="pressed" from="Main/Buttons/B_Settings" to="." method="_on_b_settings_pressed"]
 [connection signal="pressed" from="Main/Buttons/B_Exit" to="." method="_on_b_exit_pressed"]
 [connection signal="pressed" from="Settings/B_Back" to="." method="_on_b_back_pressed"]
