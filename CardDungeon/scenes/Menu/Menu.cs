@@ -58,11 +58,11 @@ public partial class Menu : Node2D
 
 	private void _on_b_new_game_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Mechanics/test_card.tscn");
+		GetTree().ChangeSceneToFile("res://Mechanics/node_2d.tscn");
 	}
 
 
-    private void _on_b_save_settings_pressed()
+	private void _on_b_save_settings_pressed()
 	{
 		var config = new ConfigFile();
 		

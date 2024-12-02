@@ -15,13 +15,13 @@ public partial class TestCard : Sprite2D
 	{
 
 		GetNode<Label>("Title").Text = Card.Title;
-		GetNode<Label>("Class").Text = Card.Class;
 		GetNode<Label>("Type").Text = Card.Type;
 		GetNode<Label>("Description").Text = Card.Description;
-		GetNode<Sprite2D>("Image_C").Texture = (Texture2D)Card.Image;
-	 }
+		GetNode<Sprite2D>("Image_C").Texture.ResourcePath = Card.Image;
+	}
 
 	public override void _Process(double delta)
 	{
+
 	}
 }

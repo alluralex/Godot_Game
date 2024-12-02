@@ -2,6 +2,7 @@ using CardDungeonGame.scenes.Map;
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,7 @@ namespace Сохранялкагодота.Mechanics
 
         public string Type { get; set; }
 
-        public Texture Image { get; set; }
+        public string Image { get; set; }
 
         public int Rarity { get; set; }
 
@@ -65,6 +66,7 @@ namespace Сохранялкагодота.Mechanics
             DealDamage = 8;
             DealArmor = 0;
             Class = Warrior;
+            Image = "res://.godot/imported/Eye Beast Attack1.png-ca48308122d7c2972ce8f7fa5e913bc1.ctex";
         }
         public override void Use(Creature dealer, Creature target)
         {
