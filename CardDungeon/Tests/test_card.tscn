@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="1_tw3y3"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="2_ndmvw"]
-[ext_resource type="Script" path="res://Mechanics/TestCard.cs" id="2_wwodg"]
+[ext_resource type="Script" path="res://Tests/TestCard.cs" id="2_wwodg"]
 [ext_resource type="Texture2D" uid="uid://bhh4d2otnm4h1" path="res://Enemies/Second_loc/Evil_Eye/Sprites/attack/Eye Beast Attack1.png" id="3_yapu8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nn3q6"]

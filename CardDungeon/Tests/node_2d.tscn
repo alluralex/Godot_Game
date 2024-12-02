@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfj3s648xxqoy"]
+
+[ext_resource type="Script" path="res://Tests/TestSize.cs" id="1_ns4sj"]
+[ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="2_u2ebs"]
+[ext_resource type="Script" path="res://Tests/TestCard.cs" id="3_fl65p"]
+[ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="4_sqdow"]
+[ext_resource type="Texture2D" uid="uid://bhh4d2otnm4h1" path="res://Enemies/Second_loc/Evil_Eye/Sprites/attack/Eye Beast Attack1.png" id="5_sjmko"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nn3q6"]
+font = ExtResource("4_sqdow")
+font_size = 31
+
+[sub_resource type="LabelSettings" id="LabelSettings_ouk2j"]
+font = ExtResource("4_sqdow")
+font_size = 21
+
+[sub_resource type="LabelSettings" id="LabelSettings_q87t0"]
+font = ExtResource("4_sqdow")
+font_size = 22
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(120, 160)
+rotation = -0.000406928
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 320.0
+script = ExtResource("1_ns4sj")
+
+[node name="Test_Card" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(120, 160)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_u2ebs")
+script = ExtResource("3_fl65p")
+
+[node name="Title" type="Label" parent="Control/Test_Card"]
+texture_filter = 1
+offset_left = -120.0
+offset_top = -287.0
+offset_right = 122.0
+offset_bottom = -253.0
+text = "TEST"
+label_settings = SubResource("LabelSettings_nn3q6")
+horizontal_alignment = 1
+
+[node name="Type" type="Label" parent="Control/Test_Card"]
+texture_filter = 1
+offset_left = -61.0
+offset_top = 106.0
+offset_right = 62.0
+offset_bottom = 127.0
+text = "TEST
+"
+label_settings = SubResource("LabelSettings_ouk2j")
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="Control/Test_Card"]
+texture_filter = 1
+offset_left = -140.0
+offset_top = 136.0
+offset_right = 141.0
+offset_bottom = 208.0
+text = "Я ТАЛАНТ"
+label_settings = SubResource("LabelSettings_q87t0")
+
+[node name="Image_C" type="Sprite2D" parent="Control/Test_Card"]
+position = Vector2(0, -93)
+scale = Vector2(5, 5)
+texture = ExtResource("5_sjmko")
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 0.0976624
+offset_right = 481.0
+offset_bottom = 320.098
+size_flags_horizontal = 8
+script = ExtResource("1_ns4sj")
+
+[node name="Test_Card" type="Sprite2D" parent="Control2"]
+texture_filter = 1
+position = Vector2(119.935, 160.049)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_u2ebs")
+script = ExtResource("3_fl65p")
+
+[node name="Title" type="Label" parent="Control2/Test_Card"]
+texture_filter = 1
+offset_left = -120.0
+offset_top = -287.0
+offset_right = 122.0
+offset_bottom = -253.0
+text = "TEST"
+label_settings = SubResource("LabelSettings_nn3q6")
+horizontal_alignment = 1
+
+[node name="Type" type="Label" parent="Control2/Test_Card"]
+texture_filter = 1
+offset_left = -61.0
+offset_top = 106.0
+offset_right = 62.0
+offset_bottom = 127.0
+text = "TEST
+"
+label_settings = SubResource("LabelSettings_ouk2j")
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="Control2/Test_Card"]
+texture_filter = 1
+offset_left = -140.0
+offset_top = 136.0
+offset_right = 141.0
+offset_bottom = 208.0
+text = "Я ТАЛАНТ"
+label_settings = SubResource("LabelSettings_q87t0")
+
+[node name="Image_C" type="Sprite2D" parent="Control2/Test_Card"]
+position = Vector2(0, -93)
+scale = Vector2(5, 5)
+texture = ExtResource("5_sjmko")
+
+[connection signal="mouse_entered" from="Control" to="Control" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control" to="Control" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Control2" to="Control2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control2" to="Control2" method="_on_control_mouse_exited"]
