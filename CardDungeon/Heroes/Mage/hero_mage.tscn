@@ -345,4 +345,4 @@ texture_filter = 1
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gdkug")
 animation = &"attack"
-frame_progress = 0.0844487
+frame_progress = 0.184728

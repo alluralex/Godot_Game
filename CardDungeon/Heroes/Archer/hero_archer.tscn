@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cm6a6ajkj787i"]
+[gd_scene load_steps=36 format=3 uid="uid://cm6a6ajkj787i"]
 
 [ext_resource type="Texture2D" uid="uid://cymyp67nmhk7l" path="res://Heroes/Archer/Sprites/spritesheet.png" id="1_wlqb1"]
 
@@ -82,15 +82,23 @@ region = Rect2(128, 320, 64, 64)
 atlas = ExtResource("1_wlqb1")
 region = Rect2(0, 320, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cbdd4"]
-atlas = ExtResource("1_wlqb1")
-region = Rect2(64, 320, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_u3owu"]
 atlas = ExtResource("1_wlqb1")
 region = Rect2(128, 320, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_buqy8"]
+atlas = ExtResource("1_wlqb1")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg616"]
+atlas = ExtResource("1_wlqb1")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aeyjp"]
+atlas = ExtResource("1_wlqb1")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd10u"]
 atlas = ExtResource("1_wlqb1")
 region = Rect2(192, 320, 64, 64)
 
@@ -205,17 +213,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_y0ctk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cbdd4")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_u3owu")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_buqy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg616")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aeyjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd10u")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 8.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -252,5 +266,5 @@ texture_filter = 1
 
 [node name="a_sprites" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_808wo")
-animation = &"hit"
-frame_progress = 0.658589
+animation = &"idle"
+frame_progress = 0.461011
