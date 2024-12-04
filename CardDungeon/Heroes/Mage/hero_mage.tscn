@@ -344,5 +344,5 @@ texture_filter = 1
 [node name="m_sprites" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gdkug")
-animation = &"attack"
-frame_progress = 0.184728
+animation = &"walk"
+frame_progress = 0.730908
