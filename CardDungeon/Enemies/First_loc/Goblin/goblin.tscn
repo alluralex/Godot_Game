@@ -242,6 +242,10 @@ texture_filter = 1
 
 [node name="G_Enemy" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fedwk")
+<<<<<<< Updated upstream
 animation = &"idle"
 autoplay = "idle"
+=======
+animation = &"walk"
+>>>>>>> Stashed changes
 flip_h = true

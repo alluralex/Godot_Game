@@ -17,7 +17,6 @@ namespace CardDungeonGame.scenes.Map
 
         public int? CurrentArmor { get; set; }
 
-
         public int CurrentHealth { get; set; }
 
         public List<Card> Cards { get; set; }
@@ -46,10 +45,15 @@ namespace CardDungeonGame.scenes.Map
     public class Hero : Creature
     {
         public int Class { get; set; }
+
+        public int MaxEnergy { get; set; }
+
+        public int CurrentEnergy { get; set; }
     }
 
     public class Enemy : Creature
     {
         //public bool Boss { get; set; } = false;
+        public bool EliteEnemy { get; set; }
     }
 }

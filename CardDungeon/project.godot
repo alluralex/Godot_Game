@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CardDungeon"
-run/main_scene="res://scenes/Menu/menu.tscn"
+run/main_scene="res://BackGrounds/Menu/menu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://Photos/shield.png"
 
@@ -28,6 +28,7 @@ project/assembly_name="Сохранялкагодота"
 [file_customization]
 
 folder_colors={
+"res://BackGrounds/HeroChoose/": "green",
 "res://BackGrounds/Menu/": "teal",
 "res://Enemies/First_loc/": "green",
 "res://Enemies/First_loc/Boss_Demon/": "red",

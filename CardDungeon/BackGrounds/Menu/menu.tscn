@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dl1qtmqhal033"]
 
 [ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="1_mh6pt"]
-[ext_resource type="Script" path="res://scenes/Menu/Menu.cs" id="1_x5ddw"]
+[ext_resource type="Script" path="res://BackGrounds/Menu/Menu.cs" id="1_x5ddw"]
 [ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/Settings.png" id="2_1wk4u"]
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="3_c8h33"]
 [ext_resource type="Texture2D" uid="uid://bimrsshbo28vf" path="res://Photos/newgame.png" id="4_5514m"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/GALKA.png" id="7_4gwhv"]
 [ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://Music/MenuMusic.mp3" id="7_11yh3"]
 [ext_resource type="Texture2D" uid="uid://dp34kragf88oq" path="res://Photos/white_sqr.png" id="8_bbk33"]
-[ext_resource type="PackedScene" uid="uid://dqpfk78ur2uew" path="res://scenes/Menu/bg.tscn" id="9_fqh7i"]
+[ext_resource type="PackedScene" uid="uid://dqpfk78ur2uew" path="res://BackGrounds/Menu/bg.tscn" id="9_fqh7i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_on556"]
 font = ExtResource("4_khwt1")

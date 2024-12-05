@@ -1,6 +1,6 @@
 [gd_scene load_steps=172 format=3 uid="uid://dnnbk8y1j54qh"]
 
-[ext_resource type="Script" path="res://scenes/Menu/HeroChoose.cs" id="1_2upxu"]
+[ext_resource type="Script" path="res://scenes/ChooseHero/HeroChoose.cs" id="1_2upxu"]
 [ext_resource type="Texture2D" uid="uid://lhqm8r34ayhd" path="res://Photos/Circle.png" id="1_l55nl"]
 [ext_resource type="Texture2D" uid="uid://cymyp67nmhk7l" path="res://Heroes/Archer/Sprites/spritesheet.png" id="2_pktsb"]
 [ext_resource type="Texture2D" uid="uid://m4y7x7dhiu1s" path="res://Heroes/Warrior/Sprites/NightBorne.png" id="3_cjyby"]
