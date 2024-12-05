@@ -1,14 +1,12 @@
-[gd_scene load_steps=161 format=3 uid="uid://dnnbk8y1j54qh"]
+[gd_scene load_steps=172 format=3 uid="uid://dnnbk8y1j54qh"]
 
 [ext_resource type="Script" path="res://scenes/Menu/HeroChoose.cs" id="1_2upxu"]
 [ext_resource type="Texture2D" uid="uid://lhqm8r34ayhd" path="res://Photos/Circle.png" id="1_l55nl"]
 [ext_resource type="Texture2D" uid="uid://cymyp67nmhk7l" path="res://Heroes/Archer/Sprites/spritesheet.png" id="2_pktsb"]
 [ext_resource type="Texture2D" uid="uid://m4y7x7dhiu1s" path="res://Heroes/Warrior/Sprites/NightBorne.png" id="3_cjyby"]
 [ext_resource type="Texture2D" uid="uid://dprjtfmiswqro" path="res://Heroes/Mage/Sprites/Necromancer_creativekind-Sheet.png" id="4_jh34f"]
-[ext_resource type="Texture2D" uid="uid://dqc7duqu4uvui" path="res://Heroes/Mage/Sprites/MageSelected.png" id="6_t7nu1"]
+[ext_resource type="Texture2D" uid="uid://cy2i6akp58eox" path="res://Photos/Heart2D.png" id="7_1ja5r"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="7_qrl3v"]
-[ext_resource type="Texture2D" uid="uid://218fhfpmp0ed" path="res://Heroes/Warrior/Sprites/WarriorSelected.png" id="8_aoqmg"]
-[ext_resource type="Texture2D" uid="uid://bq1w2ndd7we6r" path="res://Heroes/Archer/Sprites/ArcherSelected.png" id="9_s3iba"]
 [ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="10_kgxmb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ib4x7"]
@@ -741,6 +739,58 @@ region = Rect2(1760, 256, 160, 128)
 atlas = ExtResource("4_jh34f")
 region = Rect2(1920, 256, 160, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_db8mo"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(0, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yykiv"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(160, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fff3i"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(320, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g585n"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(480, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlyy1"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(640, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqrwl"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(800, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmnrq"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(960, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6xd6"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(1120, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3afg5"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(1280, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rceu"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(1440, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1dug"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(1600, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii08a"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(1760, 384, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krr7e"]
+atlas = ExtResource("4_jh34f")
+region = Rect2(1920, 384, 160, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_8aeix"]
 atlas = ExtResource("4_jh34f")
 region = Rect2(0, 768, 160, 128)
@@ -913,6 +963,50 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_db8mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yykiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fff3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g585n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlyy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqrwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmnrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6xd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3afg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rceu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1dug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii08a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krr7e")
+}],
+"loop": true,
+"name": &"attack_NoEffects",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8aeix")
 }, {
 "duration": 1.0,
@@ -1041,9 +1135,9 @@ font_size = 81
 outline_size = 15
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_evy07"]
+[sub_resource type="LabelSettings" id="LabelSettings_toeg4"]
 font = ExtResource("7_qrl3v")
-font_size = 44
+font_size = 56
 outline_size = 15
 outline_color = Color(0, 0, 0, 1)
 
@@ -1072,11 +1166,198 @@ width = 1152
 height = 300
 fill_from = Vector2(0.311927, 0)
 
-[sub_resource type="LabelSettings" id="LabelSettings_toeg4"]
-font = ExtResource("7_qrl3v")
-font_size = 56
-outline_size = 15
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipnxx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbwrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csj3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7ym7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y647i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jpd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijur4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmi1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mquwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1me7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcwyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fleg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikctl")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy1yy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvefc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j8ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br6my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52ltt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh5sc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbd2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpw5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hudio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6wa2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7m4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi47s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi73a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ownu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y57ph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycx7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3bf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_riqga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie7dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgp00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uuni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo687")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4a61")
+}],
+"loop": true,
+"name": &"death",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gbfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk4k1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tex50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uasxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxoqf")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkolf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at7tf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st4b1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3quhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phf4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feekj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvm0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eosq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfnbu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulrrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb0bs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbntp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfxdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_480r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6npff")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_dxqa4"]
 offsets = PackedFloat32Array(0, 0.863636)
@@ -1183,35 +1464,56 @@ visible = false
 position = Vector2(576, 503)
 texture = SubResource("GradientTexture2D_2gptn")
 
-[node name="HeroImageMage" type="Sprite2D" parent="States/StateHeroMage"]
+[node name="M_attack" type="AnimatedSprite2D" parent="States/StateHeroMage"]
 texture_filter = 1
-position = Vector2(-400, 0)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("6_t7nu1")
+position = Vector2(-383, -32)
+scale = Vector2(3.2, 3.23119)
+sprite_frames = SubResource("SpriteFrames_gdkug")
+animation = &"attack_NoEffects"
+autoplay = "attack_NoEffects"
+frame_progress = 0.541969
 
 [node name="MageName" type="Label" parent="States/StateHeroMage"]
-offset_left = -24.0
-offset_top = -131.0
-offset_right = 320.0
-offset_bottom = -49.0
+offset_left = -109.0
+offset_top = -140.0
+offset_right = 119.0
+offset_bottom = -58.0
 text = "ВОЛШЕБНИК"
 label_settings = SubResource("LabelSettings_obgby")
 
 [node name="HealthOfMage" type="Label" parent="States/StateHeroMage"]
-offset_left = 62.0
-offset_top = -37.0
-offset_right = 247.0
-offset_bottom = 63.0
-text = "❤30"
+offset_left = -10.0
+offset_top = -29.0
+offset_right = 175.0
+offset_bottom = 71.0
+text = "30/30"
 label_settings = SubResource("LabelSettings_obgby")
+horizontal_alignment = 1
 
-[node name="MageAbility" type="Label" parent="States/StateHeroMage"]
+[node name="Heart2D" type="Sprite2D" parent="States/StateHeroMage/HealthOfMage"]
+position = Vector2(-52, 47)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_1ja5r")
+
+[node name="MageArtefact" type="Label" parent="States/StateHeroMage"]
 offset_left = -106.0
 offset_top = 78.0
-offset_right = 458.0
+offset_right = 349.0
 offset_bottom = 141.0
-text = "ОСОБЕННОСТЬ: МНОГО УРОНА, МАЛО БРОНИ"
-label_settings = SubResource("LabelSettings_evy07")
+text = "НАЧАЛЬНЫЙ АРТЕФАКТ"
+label_settings = SubResource("LabelSettings_toeg4")
+
+[node name="StartArtefactForMage" type="Control" parent="States/StateHeroMage/MageArtefact"]
+anchors_preset = 0
+offset_left = 464.0
+offset_top = -6.0
+offset_right = 528.0
+offset_bottom = 58.0
+
+[node name="StartArtefactForMageSprite" type="Sprite2D" parent="States/StateHeroMage/MageArtefact/StartArtefactForMage"]
+position = Vector2(32, 32)
+scale = Vector2(2, 2)
+texture = ExtResource("1_l55nl")
 
 [node name="Empty" type="Sprite2D" parent="States"]
 position = Vector2(576, 503)
@@ -1232,35 +1534,56 @@ visible = false
 position = Vector2(576, 503)
 texture = SubResource("GradientTexture2D_y1utw")
 
-[node name="HeroImageWarrior" type="Sprite2D" parent="States/StateHeroWarrior"]
-texture_filter = 1
-position = Vector2(-400, 0)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("8_aoqmg")
+[node name="W_attack" type="AnimatedSprite2D" parent="States/StateHeroWarrior"]
+position = Vector2(-387, -13)
+scale = Vector2(4, 3.99969)
+sprite_frames = SubResource("SpriteFrames_ipnxx")
+animation = &"attack"
+autoplay = "attack"
+frame_progress = 0.418211
+speed_scale = 0.6
 
 [node name="WarriorName" type="Label" parent="States/StateHeroWarrior"]
-offset_left = 28.0
-offset_top = -137.0
-offset_right = 246.0
-offset_bottom = -55.0
+offset_left = -109.0
+offset_top = -140.0
+offset_right = 109.0
+offset_bottom = -58.0
 text = "МЕЧНИК"
 label_settings = SubResource("LabelSettings_obgby")
 
 [node name="HealthOfWarrior" type="Label" parent="States/StateHeroWarrior"]
-offset_left = 62.0
-offset_top = -37.0
-offset_right = 247.0
-offset_bottom = 63.0
-text = "❤65"
+offset_left = -10.0
+offset_top = -29.0
+offset_right = 175.0
+offset_bottom = 71.0
+text = "65/65"
 label_settings = SubResource("LabelSettings_obgby")
+horizontal_alignment = 1
 
-[node name="WarriorAbility" type="Label" parent="States/StateHeroWarrior"]
+[node name="Heart2D" type="Sprite2D" parent="States/StateHeroWarrior/HealthOfWarrior"]
+position = Vector2(-52, 47)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_1ja5r")
+
+[node name="WarriorArtefact" type="Label" parent="States/StateHeroWarrior"]
 offset_left = -106.0
 offset_top = 78.0
-offset_right = 458.0
+offset_right = 349.0
 offset_bottom = 141.0
-text = "ОСОБЕННОСТЬ: МНОГО БРОНИ"
+text = "НАЧАЛЬНЫЙ АРТЕФАКТ"
 label_settings = SubResource("LabelSettings_toeg4")
+
+[node name="StartArtefactForWarrior" type="Control" parent="States/StateHeroWarrior/WarriorArtefact"]
+anchors_preset = 0
+offset_left = 464.0
+offset_top = -6.0
+offset_right = 528.0
+offset_bottom = 58.0
+
+[node name="StartArtefactForWarriorSprite" type="Sprite2D" parent="States/StateHeroWarrior/WarriorArtefact/StartArtefactForWarrior"]
+position = Vector2(32, 32)
+scale = Vector2(2, 2)
+texture = ExtResource("1_l55nl")
 
 [node name="StateHeroArcher" type="Sprite2D" parent="States"]
 visible = false
@@ -1268,45 +1591,65 @@ texture_filter = 1
 position = Vector2(576, 503)
 texture = SubResource("GradientTexture2D_py2wm")
 
-[node name="HeroImageArcher" type="Sprite2D" parent="States/StateHeroArcher"]
-texture_filter = 1
-position = Vector2(-400, 0)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("9_s3iba")
-
 [node name="ArcherName" type="Label" parent="States/StateHeroArcher"]
-offset_left = 28.0
-offset_top = -137.0
-offset_right = 246.0
-offset_bottom = -55.0
+offset_left = -109.0
+offset_top = -140.0
+offset_right = 109.0
+offset_bottom = -58.0
 text = "ЛУЧНИК"
 label_settings = SubResource("LabelSettings_obgby")
 
 [node name="HealthOfArcher" type="Label" parent="States/StateHeroArcher"]
-offset_left = 62.0
-offset_top = -37.0
-offset_right = 247.0
-offset_bottom = 63.0
-text = "❤45"
+offset_left = -10.0
+offset_top = -29.0
+offset_right = 175.0
+offset_bottom = 71.0
+text = "45/45"
 label_settings = SubResource("LabelSettings_obgby")
+horizontal_alignment = 1
 
-[node name="ArcherAbility" type="Label" parent="States/StateHeroArcher"]
+[node name="Heart2D" type="Sprite2D" parent="States/StateHeroArcher/HealthOfArcher"]
+position = Vector2(-52, 47)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_1ja5r")
+
+[node name="ArcherArtefact" type="Label" parent="States/StateHeroArcher"]
 offset_left = -106.0
 offset_top = 78.0
-offset_right = 535.0
+offset_right = 349.0
 offset_bottom = 141.0
-text = "ОСОБЕННОСТЬ: ЧАСТЫЕ УВОРОТЫ"
+text = "НАЧАЛЬНЫЙ АРТЕФАКТ"
 label_settings = SubResource("LabelSettings_toeg4")
+
+[node name="StartArtefactForArcher" type="Control" parent="States/StateHeroArcher/ArcherArtefact"]
+anchors_preset = 0
+offset_left = 464.0
+offset_top = -6.0
+offset_right = 528.0
+offset_bottom = 58.0
+
+[node name="StartArtefactForArcherSprite" type="Sprite2D" parent="States/StateHeroArcher/ArcherArtefact/StartArtefactForArcher"]
+position = Vector2(32, 32)
+scale = Vector2(2, 2)
+texture = ExtResource("1_l55nl")
+
+[node name="A_attack" type="AnimatedSprite2D" parent="States/StateHeroArcher"]
+position = Vector2(-401, 23)
+scale = Vector2(4, 3.59239)
+sprite_frames = SubResource("SpriteFrames_808wo")
+animation = &"attack"
+autoplay = "attack"
+frame_progress = 0.347173
 
 [node name="StartRun" type="Button" parent="."]
 visible = false
-offset_left = 923.0
-offset_top = 432.0
-offset_right = 1115.0
-offset_bottom = 553.0
-text = "НАЧАТЬ ЗАБЕГ"
+offset_left = 1033.0
+offset_top = 352.0
+offset_right = 1153.0
+offset_bottom = 473.0
 icon = ExtResource("10_kgxmb")
-alignment = 2
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="mouse_entered" from="Heroes/Button_Warrior" to="." method="_on_button_warrior_mouse_entered"]
 [connection signal="mouse_exited" from="Heroes/Button_Warrior" to="." method="_on_button_warrior_mouse_exited"]
