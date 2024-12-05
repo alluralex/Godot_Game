@@ -242,6 +242,6 @@ texture_filter = 1
 
 [node name="G_Enemy" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fedwk")
-animation = &"walk"
-frame_progress = 0.508727
+animation = &"idle"
+autoplay = "idle"
 flip_h = true

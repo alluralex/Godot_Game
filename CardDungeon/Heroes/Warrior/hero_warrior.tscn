@@ -420,4 +420,5 @@ texture_filter = 1
 
 [node name="w_sprites" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iopk2")
-animation = &"walk"
+animation = &"idle"
+autoplay = "idle"

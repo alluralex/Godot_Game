@@ -292,5 +292,5 @@ scale = Vector2(0.5, 0.5)
 
 [node name="GS_Enemy" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ypxuj")
-animation = &"walk"
-frame_progress = 0.625024
+animation = &"idle"
+autoplay = "idle"
