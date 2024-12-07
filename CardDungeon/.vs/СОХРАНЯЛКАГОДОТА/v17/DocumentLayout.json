@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{B10EE25B-EDEA-4341-995F-EF6320645BC1}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:mechanics\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B10EE25B-EDEA-4341-995F-EF6320645BC1}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\alex\\desktop\\godot_creations\\godot_game\\carddungeon\\mechanics\\cards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B10EE25B-EDEA-4341-995F-EF6320645BC1}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:mechanics\\cards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B10EE25B-EDEA-4341-995F-EF6320645BC1}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|c:\\users\\alex\\desktop\\godot_creations\\godot_game\\carddungeon\\scenes\\choosehero\\herochoose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B10EE25B-EDEA-4341-995F-EF6320645BC1}|\u0421\u043E\u0445\u0440\u0430\u043D\u044F\u043B\u043A\u0430\u0433\u043E\u0434\u043E\u0442\u0430.csproj|solutionrelative:scenes\\choosehero\\herochoose.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,6 +42,10 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\Godot_Game\\CardDungeon\\scenes\\Menu\\Bg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Mechanics\\Cards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Mechanics\\Cards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HeroChoose.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\ChooseHero\\HeroChoose.cs",
               "RelativeDocumentMoniker": "scenes\\ChooseHero\\HeroChoose.cs",
@@ -95,12 +95,11 @@
               "RelativeToolTip": "scenes\\ChooseHero\\HeroChoose.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwA0AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T12:49:43.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T12:49:43.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TestCard.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Tests\\TestCard.cs",
               "RelativeDocumentMoniker": "Tests\\TestCard.cs",
@@ -108,12 +107,11 @@
               "RelativeToolTip": "Tests\\TestCard.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:34:58.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T14:34:58.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "TestSize.cs",
               "DocumentMoniker": "C:\\Users\\STUDENT\\DOCUMENTS\\GITHUB\\GODOT_GAME\\CARDDUNGEON\\Mechanics\\TestSize.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\STUDENT\\DOCUMENTS\\GITHUB\\GODOT_GAME\\CARDDUNGEON\\Mechanics\\TestSize.cs",
@@ -125,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "resolutions.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Menu\\resolutions.cs",
               "RelativeDocumentMoniker": "scenes\\Menu\\resolutions.cs",
@@ -133,12 +131,11 @@
               "RelativeToolTip": "scenes\\Menu\\resolutions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T11:23:02.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T11:23:02.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AudioStreamPlayer.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Menu\\AudioStreamPlayer.cs",
               "RelativeDocumentMoniker": "scenes\\Menu\\AudioStreamPlayer.cs",
@@ -150,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Bg.cs",
               "DocumentMoniker": "D:\\Git\\Godot_Game\\CardDungeon\\scenes\\Menu\\Bg.cs",
               "ToolTip": "D:\\Git\\Godot_Game\\CardDungeon\\scenes\\Menu\\Bg.cs",
@@ -160,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "TestCard.cs",
               "DocumentMoniker": "C:\\Users\\STUDENT\\DOCUMENTS\\GITHUB\\GODOT_GAME\\CARDDUNGEON\\Mechanics\\TestCard.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\STUDENT\\DOCUMENTS\\GITHUB\\GODOT_GAME\\CARDDUNGEON\\Mechanics\\TestCard.cs",
@@ -172,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Map\\Map.cs",
               "RelativeDocumentMoniker": "scenes\\Map\\Map.cs",
@@ -184,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Effect.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Mechanics\\Effect.cs",
               "RelativeDocumentMoniker": "Mechanics\\Effect.cs",
@@ -209,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "Cards.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\Mechanics\\Cards.cs",
               "RelativeDocumentMoniker": "Mechanics\\Cards.cs",
@@ -217,12 +214,11 @@
               "RelativeToolTip": "Mechanics\\Cards.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAAACUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T06:05:58.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T06:05:58.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Rooms.cs",
               "DocumentMoniker": "C:\\Users\\Alex\\Desktop\\Godot_Creations\\Godot_Game\\CardDungeon\\scenes\\Map\\Rooms.cs",
               "RelativeDocumentMoniker": "scenes\\Map\\Rooms.cs",

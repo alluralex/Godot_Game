@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://etnq32u3e34p"]
+[gd_scene load_steps=5 format=3 uid="uid://etnq32u3e34p"]
 
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="1_h0h6k"]
+[ext_resource type="Script" path="res://Tests/delete/Cardui.cs" id="1_s8wjn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v4yvu"]
 line_spacing = 1.0
 font = ExtResource("1_h0h6k")
 font_size = 10
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxj8s"]
+size = Vector2(25, 30)
+
 [node name="CardUI" type="Control"]
 texture_filter = 1
+custom_minimum_size = Vector2(25, 30)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +22,7 @@ offset_right = -1127.0
 offset_bottom = -618.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_s8wjn")
 
 [node name="Color" type="ColorRect" parent="."]
 layout_mode = 1
@@ -38,3 +44,10 @@ text = "state"
 label_settings = SubResource("LabelSettings_v4yvu")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DropPointDetector" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+position = Vector2(12.5, 15)
+shape = SubResource("RectangleShape2D_bxj8s")
