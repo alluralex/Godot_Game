@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0vkovprfmcs3"]
+[gd_scene load_steps=9 format=3 uid="uid://d0vkovprfmcs3"]
 
 [ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="1_tw3y3"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="2_ndmvw"]
@@ -17,14 +17,32 @@ font_size = 21
 font = ExtResource("2_ndmvw")
 font_size = 22
 
-[node name="Test_Card" type="Sprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs1vp"]
+size = Vector2(469, 637)
+
+[node name="CardUI" type="Control"]
+custom_minimum_size = Vector2(450, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -573.0
+offset_bottom = -204.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Test_Card" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(402, 203)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_tw3y3")
 script = ExtResource("2_wwodg")
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="Test_Card"]
 texture_filter = 1
 offset_left = -120.0
 offset_top = -287.0
@@ -34,7 +52,7 @@ text = "TEST"
 label_settings = SubResource("LabelSettings_nn3q6")
 horizontal_alignment = 1
 
-[node name="Type" type="Label" parent="."]
+[node name="Type" type="Label" parent="Test_Card"]
 texture_filter = 1
 offset_left = -61.0
 offset_top = 106.0
@@ -45,7 +63,7 @@ text = "TEST
 label_settings = SubResource("LabelSettings_ouk2j")
 horizontal_alignment = 1
 
-[node name="Description" type="Label" parent="."]
+[node name="Description" type="Label" parent="Test_Card"]
 texture_filter = 1
 offset_left = -140.0
 offset_top = 136.0
@@ -54,7 +72,14 @@ offset_bottom = 208.0
 text = "Я ТАЛАНТ"
 label_settings = SubResource("LabelSettings_q87t0")
 
-[node name="Image_C" type="Sprite2D" parent="."]
+[node name="Image_C" type="Sprite2D" parent="Test_Card"]
 position = Vector2(0, -93)
 scale = Vector2(5, 5)
 texture = ExtResource("3_yapu8")
+
+[node name="DropPointDetector" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_rs1vp")

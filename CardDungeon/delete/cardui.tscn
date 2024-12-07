@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://etnq32u3e34p"]
+
+[ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="1_h0h6k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4yvu"]
+line_spacing = 1.0
+font = ExtResource("1_h0h6k")
+font_size = 10
+
+[node name="CardUI" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1127.0
+offset_bottom = -618.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Color" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.251946, 0.510135, 0.287158, 1)
+
+[node name="State" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "state"
+label_settings = SubResource("LabelSettings_v4yvu")
+horizontal_alignment = 1
+vertical_alignment = 1

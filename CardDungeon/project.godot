@@ -28,7 +28,6 @@ project/assembly_name="Сохранялкагодота"
 [file_customization]
 
 folder_colors={
-"res://BackGrounds/HeroChoose/": "green",
 "res://BackGrounds/Menu/": "teal",
 "res://Enemies/First_loc/": "green",
 "res://Enemies/First_loc/Boss_Demon/": "red",
@@ -39,6 +38,11 @@ folder_colors={
 "res://Heroes/Warrior/": "red",
 "res://Tests/": "pink"
 }
+
+[layer_names]
+
+2d_physics/layer_1="card_target_selector"
+2d_physics/layer_2="card_drop_area"
 
 [rendering]
 
