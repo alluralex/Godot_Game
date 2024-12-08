@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=4 uid="uid://ca5f2uenwsf8v"]
+[gd_scene load_steps=18 format=4 uid="uid://ca5f2uenwsf8v"]
 
 [ext_resource type="Texture2D" uid="uid://dvkmufx6fm6xv" path="res://BackGrounds/Menu/mainlev_build.png" id="1_qbh7e"]
 [ext_resource type="PackedScene" uid="uid://bqg8yokgbfj8k" path="res://Heroes/Warrior/hero_warrior.tscn" id="2_2tm33"]
 [ext_resource type="PackedScene" uid="uid://dfguw8vvhp8" path="res://Enemies/First_loc/Golem_small/golem_small.tscn" id="3_vs6uj"]
 [ext_resource type="PackedScene" uid="uid://etnq32u3e34p" path="res://Tests/delete/cardui.tscn" id="4_cqkwy"]
+[ext_resource type="Texture2D" uid="uid://cgtd67ug8twe" path="res://Photos/Menu_TOPGAME.png" id="5_xjo4n"]
+[ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="6_usip0"]
+[ext_resource type="Texture2D" uid="uid://28ovcjc8yaih" path="res://Photos/EmptyItem.png" id="7_rvjar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbbrl"]
 texture = ExtResource("1_qbh7e")
@@ -1839,7 +1842,29 @@ texture = ExtResource("1_qbh7e")
 sources/0 = SubResource("TileSetAtlasSource_wcdvd")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27qh3"]
-size = Vector2(1150, 524)
+size = Vector2(1150, 469.5)
+
+[sub_resource type="Gradient" id="Gradient_h4bvk"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.113725, 0.113725, 0.113725, 0.933333)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gteag"]
+gradient = SubResource("Gradient_h4bvk")
+width = 1152
+
+[sub_resource type="LabelSettings" id="LabelSettings_q0gh5"]
+font = ExtResource("6_usip0")
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_jbjme"]
+font = ExtResource("6_usip0")
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_84k20"]
+font = ExtResource("6_usip0")
+font_size = 24
+outline_size = 10
+outline_color = Color(1, 0.320024, 0.292916, 1)
 
 [node name="Battle" type="Node2D"]
 
@@ -1877,7 +1902,7 @@ scale = Vector2(1.5, 1.5)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DEL_CardDropArea"]
-position = Vector2(575, 262)
+position = Vector2(575, 288.75)
 shape = SubResource("RectangleShape2D_27qh3")
 
 [node name="DEL_BattleUI" type="CanvasLayer" parent="."]
@@ -1919,3 +1944,77 @@ layout_mode = 2
 
 [node name="CardUI8" parent="DEL_BattleUI/Hand" instance=ExtResource("4_cqkwy")]
 layout_mode = 2
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TopMenu" type="Sprite2D" parent="Node2D"]
+position = Vector2(576, 25)
+scale = Vector2(1, 0.898438)
+texture = SubResource("GradientTexture2D_gteag")
+
+[node name="TopLineBox" type="HBoxContainer" parent="Node2D/TopMenu"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -565.0
+offset_top = -52.0
+offset_right = -469.0
+offset_bottom = -12.0
+grow_vertical = 2
+
+[node name="EscapeButton" type="Button" parent="Node2D/TopMenu/TopLineBox"]
+layout_mode = 2
+icon = ExtResource("5_xjo4n")
+
+[node name="HealthBox" type="HBoxContainer" parent="Node2D/TopMenu/TopLineBox"]
+layout_mode = 2
+
+[node name="NameClass" type="Label" parent="Node2D/TopMenu/TopLineBox/HealthBox"]
+layout_mode = 2
+text = "ВОИН          "
+label_settings = SubResource("LabelSettings_q0gh5")
+
+[node name="CurrentHealthText" type="Label" parent="Node2D/TopMenu/TopLineBox/HealthBox"]
+layout_mode = 2
+text = "НЫНЕШНЕЕ ЗДОРОВЬЕ        "
+label_settings = SubResource("LabelSettings_jbjme")
+
+[node name="CurrentHealth" type="Label" parent="Node2D/TopMenu/TopLineBox/HealthBox"]
+layout_mode = 2
+text = "3"
+label_settings = SubResource("LabelSettings_84k20")
+
+[node name="XDXDXD" type="Label" parent="Node2D/TopMenu/TopLineBox/HealthBox"]
+layout_mode = 2
+text = "/
+"
+label_settings = SubResource("LabelSettings_84k20")
+
+[node name="MaxHealth" type="Label" parent="Node2D/TopMenu/TopLineBox/HealthBox"]
+layout_mode = 2
+text = "55
+"
+label_settings = SubResource("LabelSettings_84k20")
+
+[node name="Inventory" type="HBoxContainer" parent="Node2D/TopMenu/TopLineBox"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="ItemNumber1" type="Button" parent="Node2D/TopMenu/TopLineBox/Inventory"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+icon = ExtResource("7_rvjar")
+icon_alignment = 1
+
+[node name="ItemNumber2" type="Button" parent="Node2D/TopMenu/TopLineBox/Inventory"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+icon = ExtResource("7_rvjar")
+icon_alignment = 1
+
+[node name="ItemNumber3" type="Button" parent="Node2D/TopMenu/TopLineBox/Inventory"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+icon = ExtResource("7_rvjar")
+icon_alignment = 1
