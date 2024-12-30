@@ -7,7 +7,7 @@ public partial class Menu : Node2D
 	{
 		var config = new ConfigFile();
 		var settings = config.Load("res://config.cfg");
-		
+
 		GetNode<HScrollBar>("Settings/Scr_Music").Value = (double)config.GetValue("Settings", "music_value");
 		GetNode<HScrollBar>("Settings/Scr_Sound").Value = (double)config.GetValue("Settings", "sounds_value");
 		GetNode<CheckButton>("Settings/B_FullScreen").ButtonPressed = (bool)config.GetValue("Settings", "Fullscreen");;
