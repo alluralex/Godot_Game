@@ -1,5 +1,6 @@
-[gd_scene load_steps=37 format=4 uid="uid://ca5f2uenwsf8v"]
+[gd_scene load_steps=59 format=4 uid="uid://ca5f2uenwsf8v"]
 
+[ext_resource type="Script" path="res://scenes/Battle/Battle.cs" id="1_cn07o"]
 [ext_resource type="Texture2D" uid="uid://dvkmufx6fm6xv" path="res://BackGrounds/Menu/mainlev_build.png" id="1_qbh7e"]
 [ext_resource type="PackedScene" uid="uid://bqg8yokgbfj8k" path="res://Heroes/Warrior/hero_warrior.tscn" id="2_2tm33"]
 [ext_resource type="PackedScene" uid="uid://dfguw8vvhp8" path="res://Enemies/First_loc/Golem_small/golem_small.tscn" id="3_vs6uj"]
@@ -9,6 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://cy2i6akp58eox" path="res://Photos/Heart2D.png" id="7_gvwur"]
 [ext_resource type="Texture2D" uid="uid://6nssbk5q2e32" path="res://MapElements/IconsForMap/ShopIcon.png" id="8_wfxqv"]
 [ext_resource type="Texture2D" uid="uid://sdl1aop67jll" path="res://Mechanics/Potions/EmptyBottle.png" id="9_20h8n"]
+[ext_resource type="Texture2D" uid="uid://5t48j1s4rgrd" path="res://Mechanics/Menu/MenuBox.png" id="10_0jnnf"]
+[ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="11_wicfk"]
+[ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/Settings.png" id="12_v8os3"]
+[ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="13_mxmqg"]
+[ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/Back.png" id="15_qwucn"]
+[ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/GALKA.png" id="16_4iqmv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbbrl"]
 texture = ExtResource("1_qbh7e")
@@ -3002,7 +3009,53 @@ font_size = 24
 outline_size = 10
 outline_color = Color(0.945754, 0.801324, 0, 1)
 
+[sub_resource type="Gradient" id="Gradient_7qpdj"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0, 0, 0.2)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_leqx2"]
+gradient = SubResource("Gradient_7qpdj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kpjxr"]
+texture = SubResource("GradientTexture1D_leqx2")
+
+[sub_resource type="Gradient" id="Gradient_ccxpw"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.2)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lyvef"]
+gradient = SubResource("Gradient_ccxpw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b0igb"]
+texture = SubResource("GradientTexture1D_lyvef")
+
+[sub_resource type="Gradient" id="Gradient_1kfke"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.2)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dwk8x"]
+gradient = SubResource("Gradient_1kfke")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uh8t1"]
+texture = SubResource("GradientTexture1D_dwk8x")
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqnmt"]
+font = ExtResource("6_usip0")
+
+[sub_resource type="LabelSettings" id="LabelSettings_gk584"]
+font = ExtResource("6_usip0")
+font_size = 44
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvvex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_618hp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvepk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_paaf2"]
+
 [node name="Battle" type="Node2D"]
+script = ExtResource("1_cn07o")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_0jirh")
@@ -3015,22 +3068,18 @@ tile_set = SubResource("TileSet_asbny")
 metadata/_edit_lock_ = true
 
 [node name="hero_warrior" parent="." instance=ExtResource("2_2tm33")]
-visible = false
 position = Vector2(187, 385)
 scale = Vector2(4, 4)
 
 [node name="Golem_small" parent="." instance=ExtResource("3_vs6uj")]
-visible = false
 position = Vector2(739, 412)
 scale = Vector2(1.5, 1.5)
 
 [node name="Golem_small2" parent="." instance=ExtResource("3_vs6uj")]
-visible = false
 position = Vector2(837, 413)
 scale = Vector2(1.5, 1.5)
 
 [node name="Golem_small3" parent="." instance=ExtResource("3_vs6uj")]
-visible = false
 position = Vector2(933, 413)
 scale = Vector2(1.5, 1.5)
 
@@ -3082,8 +3131,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="TopMenu" type="Sprite2D" parent="."]
-position = Vector2(576, 25)
-scale = Vector2(1, 0.898438)
+position = Vector2(576, 32)
 texture = SubResource("GradientTexture2D_gteag")
 
 [node name="TopLineBox" type="HBoxContainer" parent="TopMenu"]
@@ -3164,16 +3212,185 @@ layout_mode = 2
 alignment = 1
 
 [node name="ItemNumber1" type="Button" parent="TopMenu/TopLineBox/Inventory"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_kpjxr")
 icon = ExtResource("9_20h8n")
 icon_alignment = 1
 
 [node name="ItemNumber2" type="Button" parent="TopMenu/TopLineBox/Inventory"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_b0igb")
 icon = ExtResource("9_20h8n")
 icon_alignment = 1
 
 [node name="ItemNumber3" type="Button" parent="TopMenu/TopLineBox/Inventory"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh8t1")
 icon = ExtResource("9_20h8n")
 icon_alignment = 1
+
+[node name="MenuBox" type="Sprite2D" parent="."]
+visible = false
+clip_children = 2
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("10_0jnnf")
+
+[node name="NameGame" type="Label" parent="MenuBox"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -166.5
+offset_top = -128.0
+offset_right = -89.5
+offset_bottom = -105.0
+grow_horizontal = 2
+text = "CardDungeon"
+label_settings = SubResource("LabelSettings_uqnmt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonForMenu" type="VBoxContainer" parent="MenuBox"]
+offset_left = -65.7143
+offset_top = -45.7143
+offset_right = 203.286
+offset_bottom = 178.286
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="B_Contunie" type="Button" parent="MenuBox/ButtonForMenu"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.548634, 0.129873, 0.207966, 1)
+theme_override_colors/font_color = Color(0.773728, 0.376146, 0.508055, 1)
+theme_override_fonts/font = ExtResource("6_usip0")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "ПРОДОЛЖИТЬ"
+icon = ExtResource("11_wicfk")
+
+[node name="B_Settings" type="Button" parent="MenuBox/ButtonForMenu"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("6_usip0")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "ПАРАМЕТРЫ"
+icon = ExtResource("12_v8os3")
+
+[node name="B_Exit" type="Button" parent="MenuBox/ButtonForMenu"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("6_usip0")
+theme_override_font_sizes/font_size = 40
+text = "ВЫХОД"
+icon = ExtResource("13_mxmqg")
+
+[node name="Empty" type="Node2D" parent="MenuBox"]
+visible = false
+scale = Vector2(0.5, 0.5)
+
+[node name="Scr_Music" type="HScrollBar" parent="MenuBox/Empty"]
+custom_minimum_size = Vector2(300, 40)
+offset_left = -148.571
+offset_top = -100.0
+offset_right = 151.429
+offset_bottom = -56.0
+min_value = -60.0
+max_value = 3.0
+value = 3.0
+
+[node name="Label_Music" type="Label" parent="MenuBox/Empty/Scr_Music"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 85.0
+offset_top = -49.0
+offset_right = 217.0
+offset_bottom = -4.0
+text = "МУЗЫКА"
+label_settings = SubResource("LabelSettings_gk584")
+horizontal_alignment = 1
+
+[node name="Scr_Sound" type="HScrollBar" parent="MenuBox/Empty"]
+custom_minimum_size = Vector2(300, 40)
+offset_left = -147.143
+offset_top = 5.71429
+offset_right = 152.857
+offset_bottom = 49.7143
+value = 100.0
+
+[node name="Label_Sound" type="Label" parent="MenuBox/Empty/Scr_Sound"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 85.0
+offset_top = -49.0
+offset_right = 217.0
+offset_bottom = -4.0
+text = "ЗВУК"
+label_settings = SubResource("LabelSettings_gk584")
+horizontal_alignment = 1
+
+[node name="B_FullScreen" type="CheckButton" parent="MenuBox/Empty"]
+texture_filter = 1
+offset_left = -194.286
+offset_top = 57.1429
+offset_right = -62.2857
+offset_bottom = 81.1429
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("6_usip0")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nvvex")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_618hp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pvepk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_paaf2")
+button_pressed = true
+text = "полный экран"
+alignment = 2
+
+[node name="B_Back" type="Button" parent="MenuBox/Empty"]
+texture_filter = 1
+offset_left = -245.714
+offset_top = 197.143
+offset_right = -7.71428
+offset_bottom = 269.143
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("6_usip0")
+theme_override_font_sizes/font_size = 40
+text = "НАЗАД"
+icon = ExtResource("15_qwucn")
+
+[node name="B_SaveSettings" type="Button" parent="MenuBox/Empty"]
+texture_filter = 1
+offset_left = 78.5714
+offset_top = 195.714
+offset_right = 316.571
+offset_bottom = 267.714
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_pressed_color = Color(0.54902, 0.129412, 0.207843, 1)
+theme_override_colors/font_color = Color(0.772549, 0.376471, 0.509804, 1)
+theme_override_fonts/font = ExtResource("6_usip0")
+theme_override_font_sizes/font_size = 40
+text = "СОХРАНИТЬ
+"
+icon = ExtResource("16_4iqmv")
+icon_alignment = 2
+
+[connection signal="pressed" from="TopMenu/TopLineBox/EscapeButton" to="." method="_on_escape_button_pressed"]
+[connection signal="pressed" from="MenuBox/ButtonForMenu/B_Contunie" to="." method="_on_b_contunie_pressed"]
+[connection signal="pressed" from="MenuBox/ButtonForMenu/B_Settings" to="." method="_on_b_settings_pressed"]
+[connection signal="pressed" from="MenuBox/ButtonForMenu/B_Exit" to="." method="_on_b_exit_pressed"]
+[connection signal="value_changed" from="MenuBox/Empty/Scr_Music" to="." method="_on_scr_music_value_changed"]
+[connection signal="toggled" from="MenuBox/Empty/B_FullScreen" to="." method="_on_b_full_screen_toggled"]
+[connection signal="pressed" from="MenuBox/Empty/B_Back" to="." method="_on_b_back_pressed_returnallthreebuttons"]
+[connection signal="pressed" from="MenuBox/Empty/B_SaveSettings" to="." method="_on_b_save_settings_pressed"]

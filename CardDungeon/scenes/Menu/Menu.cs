@@ -58,7 +58,7 @@ public partial class Menu : Node2D
 
 	private void _on_b_new_game_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/Menu/HeroChoose.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/ChooseHero/HeroChoose.tscn");
 	}
 
 
