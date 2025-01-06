@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using static Heroes;
 
 public partial class HeroChoose : Node2D
 {
@@ -75,5 +76,21 @@ public partial class HeroChoose : Node2D
         GetNode<AnimatedSprite2D>("Heroes/Button_Archer/Circle_Archer/a_sprites").Animation = "idle";
     }
 
-
+    private void _on_start_run_pressed()
+    {
+        Hero hero = new Hero();
+        if (stateMage.Visible == true)
+        {
+            hero.Class = Mage_C;
+        }
+        if (stateArcher.Visible == true)
+        {
+            hero.Class = Archer_C;
+        }
+        if (stateWarrior.Visible == true)
+        {
+            hero.Class = Warrior_C;
+        }
+        GetTree().ChangeSceneToFile("res://scenes/Battle/battle.tscn");
+    }
 }

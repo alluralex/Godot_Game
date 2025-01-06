@@ -1660,3 +1660,4 @@ expand_icon = true
 [connection signal="mouse_entered" from="Heroes/Button_Mage" to="." method="_on_button_mage_mouse_entered"]
 [connection signal="mouse_exited" from="Heroes/Button_Mage" to="." method="_on_button_mage_mouse_exited"]
 [connection signal="pressed" from="Heroes/Button_Mage" to="." method="_on_button_mage_pressed"]
+[connection signal="pressed" from="StartRun" to="." method="_on_start_run_pressed"]
