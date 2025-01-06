@@ -45,9 +45,7 @@ namespace CardDungeonGame.scenes.Map
     public class Hero : Creature
     {
         public int Class { get; set; }
-
         public int MaxEnergy { get; set; }
-
         public int CurrentEnergy { get; set; }
     }
 
