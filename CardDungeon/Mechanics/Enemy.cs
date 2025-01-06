@@ -41,14 +41,6 @@ namespace CardDungeonGame.scenes.Map
             CurrentHealth -= damage;
         }
     }
-
-    public class Hero : Creature
-    {
-        public int Class { get; set; }
-        public int MaxEnergy { get; set; }
-        public int CurrentEnergy { get; set; }
-    }
-
     public class Enemy : Creature
     {
         //public bool Boss { get; set; } = false;
