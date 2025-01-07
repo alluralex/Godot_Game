@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://ca5f2uenwsf8v"]
+[gd_scene load_steps=69 format=4 uid="uid://ca5f2uenwsf8v"]
 
 [ext_resource type="Script" path="res://scenes/Battle/Battle.cs" id="1_cn07o"]
 [ext_resource type="Texture2D" uid="uid://dvkmufx6fm6xv" path="res://BackGrounds/Menu/mainlev_build.png" id="1_qbh7e"]
@@ -11,11 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://6nssbk5q2e32" path="res://MapElements/IconsForMap/ShopIcon.png" id="8_wfxqv"]
 [ext_resource type="Texture2D" uid="uid://sdl1aop67jll" path="res://Mechanics/Potions/EmptyBottle.png" id="9_20h8n"]
 [ext_resource type="Texture2D" uid="uid://5t48j1s4rgrd" path="res://Mechanics/Menu/MenuBox.png" id="10_0jnnf"]
+[ext_resource type="Texture2D" uid="uid://dpo17camu534b" path="res://Photos/CardOfDeckввв.png" id="11_p16fq"]
 [ext_resource type="Texture2D" uid="uid://dy1d82v1lb22q" path="res://Photos/Start.png" id="11_wicfk"]
 [ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/Settings.png" id="12_v8os3"]
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="13_mxmqg"]
 [ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/Back.png" id="15_qwucn"]
 [ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/GALKA.png" id="16_4iqmv"]
+[ext_resource type="Texture2D" uid="uid://lmd44sbd248p" path="res://Photos/DeckOfCard.png" id="18_t54kb"]
+[ext_resource type="Texture2D" uid="uid://cftq7mpbvsyia" path="res://Photos/quit.png" id="19_j5a5y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbbrl"]
 texture = ExtResource("1_qbh7e")
@@ -3054,6 +3057,71 @@ font_size = 44
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_paaf2"]
 
+[sub_resource type="ImageTexture" id="ImageTexture_ye08m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylpwb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4a8f"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.728822, 0.728822, 0.728822, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cl6c"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.74902, 0.74902, 0.74902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btod2"]
+content_margin_left = 2.0
+content_margin_top = 0.0
+content_margin_right = 2.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkvog"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_3wdnc"]
+VScrollBar/icons/decrement = SubResource("ImageTexture_ye08m")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_ye08m")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_ye08m")
+VScrollBar/icons/increment = SubResource("ImageTexture_ye08m")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_ye08m")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_ye08m")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_ylpwb")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_u4a8f")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_7cl6c")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_btod2")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_vkvog")
+
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_cn07o")
 
@@ -3091,6 +3159,7 @@ position = Vector2(575, 288.75)
 shape = SubResource("RectangleShape2D_27qh3")
 
 [node name="DEL_BattleUI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Hand" type="HBoxContainer" parent="DEL_BattleUI"]
 anchors_preset = 7
@@ -3231,6 +3300,18 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_uh8t1")
 icon = ExtResource("9_20h8n")
 icon_alignment = 1
+
+[node name="DeckOfCards" type="Button" parent="TopMenu"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -712.0
+offset_top = -28.0
+offset_right = -600.0
+offset_bottom = 108.0
+grow_horizontal = 0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("11_p16fq")
 
 [node name="MenuBox" type="Sprite2D" parent="."]
 visible = false
@@ -3386,7 +3467,69 @@ text = "СОХРАНИТЬ
 icon = ExtResource("16_4iqmv")
 icon_alignment = 2
 
+[node name="HeroDeckBox" type="Sprite2D" parent="."]
+top_level = true
+light_mask = 7
+visibility_layer = 7
+position = Vector2(577.5, 337)
+scale = Vector2(9.02344, 5.30562)
+texture = ExtResource("18_t54kb")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HeroDeckBox"]
+texture_filter = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.892
+offset_top = -171.3
+offset_right = -0.891773
+offset_bottom = -63.2997
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_3wdnc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HeroDeckBox/ScrollContainer"]
+layout_mode = 2
+
+[node name="CardUI" parent="HeroDeckBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_cqkwy")]
+layout_mode = 2
+
+[node name="CardUI2" parent="HeroDeckBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_cqkwy")]
+layout_mode = 2
+
+[node name="CardUI3" parent="HeroDeckBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_cqkwy")]
+layout_mode = 2
+
+[node name="CardUI4" parent="HeroDeckBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_cqkwy")]
+layout_mode = 2
+
+[node name="CardUI5" parent="HeroDeckBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_cqkwy")]
+layout_mode = 2
+
+[node name="CardUI6" parent="HeroDeckBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_cqkwy")]
+layout_mode = 2
+
+[node name="CardUI7" parent="HeroDeckBox/ScrollContainer/VBoxContainer" instance=ExtResource("4_cqkwy")]
+layout_mode = 2
+
+[node name="QuitDeck" type="Button" parent="HeroDeckBox"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -75.0822
+offset_top = -61.911
+offset_right = 60.9178
+offset_bottom = 74.089
+grow_horizontal = 0
+scale = Vector2(0.0687999, 0.119768)
+size_flags_horizontal = 10
+size_flags_vertical = 2
+icon = ExtResource("19_j5a5y")
+
 [connection signal="pressed" from="TopMenu/TopLineBox/EscapeButton" to="." method="_on_escape_button_pressed"]
+[connection signal="pressed" from="TopMenu/DeckOfCards" to="." method="_on_deck_of_cards_pressed"]
 [connection signal="pressed" from="MenuBox/ButtonForMenu/B_Contunie" to="." method="_on_b_contunie_pressed"]
 [connection signal="pressed" from="MenuBox/ButtonForMenu/B_Settings" to="." method="_on_b_settings_pressed"]
 [connection signal="pressed" from="MenuBox/ButtonForMenu/B_Exit" to="." method="_on_b_exit_pressed"]
@@ -3394,3 +3537,4 @@ icon_alignment = 2
 [connection signal="toggled" from="MenuBox/Empty/B_FullScreen" to="." method="_on_b_full_screen_toggled"]
 [connection signal="pressed" from="MenuBox/Empty/B_Back" to="." method="_on_b_back_pressed_returnallthreebuttons"]
 [connection signal="pressed" from="MenuBox/Empty/B_SaveSettings" to="." method="_on_b_save_settings_pressed"]
+[connection signal="pressed" from="HeroDeckBox/QuitDeck" to="." method="_on_quit_deck_pressed"]

@@ -5,7 +5,7 @@ public partial class Battle : Node2D
 {
     public override void _Ready()
     {
-        base._Ready();
+        
     }
     private void _on_escape_button_pressed()
     {
@@ -63,5 +63,17 @@ public partial class Battle : Node2D
     {
         GetNode<Node2D>("MenuBox/Empty").Visible = true;
         GetNode<VBoxContainer>("MenuBox/ButtonForMenu").Visible = false;
+    }
+    
+    private void _on_quit_deck_pressed()
+    {
+        GetNode<Node2D>("HeroDeckBox").Visible = false;
+        GetNode<CanvasLayer>("DEL_BattleUI").Visible = true;
+    }
+
+    private void _on_deck_of_cards_pressed()
+    {
+        GetNode<Node2D>("HeroDeckBox").Visible = true;
+        GetNode<CanvasLayer>("DEL_BattleUI").Visible = false;
     }
 }
