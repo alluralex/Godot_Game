@@ -5,15 +5,38 @@ public partial class Battle : Node2D
 {
     public override void _Ready()
     {
-        
+        var config = new ConfigFile();
+        var settings = config.Load("res://config.cfg");
+
+        GetNode<HScrollBar>("MenuBox/Empty/Scr_Music").Value = (double)config.GetValue("Settings", "music_value");
+        GetNode<HScrollBar>("MenuBox/Empty/Scr_Sound").Value = (double)config.GetValue("Settings", "sounds_value");
+        GetNode<CheckButton>("MenuBox/Empty/B_FullScreen").ButtonPressed = (bool)config.GetValue("Settings", "Fullscreen");
     }
+    
+    private void _on_deck_of_cards_pressed()
+    {
+        GetNode<Sprite2D>("HeroDeckBox").Visible = true;
+    }
+
     private void _on_escape_button_pressed()
     {
         GetNode<Sprite2D>("MenuBox").Visible = true;
     }
+    
+    private void _on_quit_deck_pressed()
+    {
+        GetNode<Sprite2D>("HeroDeckBox").Visible = false;
+    }
+
     private void _on_b_contunie_pressed()
     {
         GetNode<Sprite2D>("MenuBox").Visible = false;
+    }
+
+    private void _on_b_settings_pressed()
+    {
+        GetNode<Node2D>("MenuBox/Empty").Visible = true;
+        GetNode<VBoxContainer>("MenuBox/ButtonForMenu").Visible = false;
     }
 
     private void _on_b_exit_pressed()
@@ -21,23 +44,10 @@ public partial class Battle : Node2D
         GetTree().ChangeSceneToFile("res://BackGrounds/Menu/menu.tscn");
     }
 
-    private void _on_scr_music_value_changed(float value)
+    private void _on_b_back_pressed()
     {
-
-        var gameMusic = GetNode<AudioStreamPlayer>("Music");
-
-        gameMusic.VolumeDb = value;
-    }
-    private void _on_b_full_screen_toggled(bool value)
-    {
-        if (value == true)
-        {
-            GetTree().Root.Mode = Window.ModeEnum.Fullscreen;
-        }
-        if (value == false)
-        {
-            GetTree().Root.Mode = Window.ModeEnum.Windowed;
-        }
+        GetNode<Node2D>("MenuBox/Empty").Visible = false;
+        GetNode<VBoxContainer>("MenuBox/ButtonForMenu").Visible = true;
     }
 
     private void _on_b_save_settings_pressed()
@@ -54,26 +64,19 @@ public partial class Battle : Node2D
 
         var err = config.Save("res://config.cfg");
     }
-    private void _on_b_back_pressed_returnallthreebuttons()
+    private void _on_b_full_screen_toggled(bool value)
     {
-        GetNode<Node2D>("MenuBox/Empty").Visible = false;
-        GetNode<VBoxContainer>("MenuBox/ButtonForMenu").Visible = true;
-    }
-    private void _on_b_settings_pressed()
-    {
-        GetNode<Node2D>("MenuBox/Empty").Visible = true;
-        GetNode<VBoxContainer>("MenuBox/ButtonForMenu").Visible = false;
-    }
-    
-    private void _on_quit_deck_pressed()
-    {
-        GetNode<Node2D>("HeroDeckBox").Visible = false;
-        GetNode<CanvasLayer>("DEL_BattleUI").Visible = true;
-    }
-
-    private void _on_deck_of_cards_pressed()
-    {
-        GetNode<Node2D>("HeroDeckBox").Visible = true;
-        GetNode<CanvasLayer>("DEL_BattleUI").Visible = false;
+        var config = new ConfigFile();
+        if (value == true)
+        {
+            GetTree().Root.Mode = Window.ModeEnum.Fullscreen;
+        }
+        if (value == false)
+        {
+            GetTree().Root.Mode = Window.ModeEnum.Windowed;
+        }
+        bool fullscreen = GetNode<CheckButton>("MenuBox/Empty/B_FullScreen").ButtonPressed;
+        config.SetValue("Settings", "Fullscreen", fullscreen);
+        var err = config.Save("res://config.cfg");
     }
 }

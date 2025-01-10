@@ -10,8 +10,18 @@ public partial class Menu : Node2D
 
 		GetNode<HScrollBar>("Settings/Scr_Music").Value = (double)config.GetValue("Settings", "music_value");
 		GetNode<HScrollBar>("Settings/Scr_Sound").Value = (double)config.GetValue("Settings", "sounds_value");
-		GetNode<CheckButton>("Settings/B_FullScreen").ButtonPressed = (bool)config.GetValue("Settings", "Fullscreen");;
-	}
+		var button_f_scr = GetNode<CheckButton>("Settings/B_FullScreen").ButtonPressed = (bool)config.GetValue("Settings", "Fullscreen");
+
+		if (button_f_scr == true ) 
+		{
+            GetTree().Root.Mode = Window.ModeEnum.Fullscreen;
+        }
+        else
+        {
+            GetTree().Root.Mode = Window.ModeEnum.Windowed;
+        }
+
+    }
 	//exit
 	private void _on_b_exit_pressed()
 	{
@@ -54,6 +64,7 @@ public partial class Menu : Node2D
 		{
 			GetTree().Root.Mode = Window.ModeEnum.Windowed;
 		}
+
 	}
 
 	private void _on_b_new_game_pressed()
@@ -76,4 +87,6 @@ public partial class Menu : Node2D
 		
 		var err = config.Save("res://config.cfg");
 	}
+
+    
 }
