@@ -22,17 +22,20 @@ public partial class Heroes : Node
             CurrentEnergy = MaxEnergy;
             Effects = new List<Effect>();
             CurrentArmor = 0;
+            
         }
     }
     public class Warrior : Hero
     {
         public Warrior()
         {
-            Name = "Воин";
+            Name = "Мечник";
             MaxHealth = 65;
             CurrentHealth = MaxHealth;
-            Cards = new List<Card> { new Warrior_SimpleAttack_Bronze(), new Warrior_SimpleDefence_Bronze(), new Warrior_Lunge_Bronze() };
+            Cards = new List<Card> { };
             Class = Warrior_C;
+            
+            Sprite = "warrior";
         }
 
     }

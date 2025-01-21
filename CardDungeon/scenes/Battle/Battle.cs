@@ -3,16 +3,22 @@ using System;
 
 public partial class Battle : Node2D
 {
+    Heroes.Hero MyHero;
+
     public override void _Ready()
     {
         var config = new ConfigFile();
         var settings = config.Load("res://config.cfg");
+        MyHero = CurrentHero.Hero;
 
         GetNode<HScrollBar>("MenuBox/Empty/Scr_Music").Value = (double)config.GetValue("Settings", "music_value");
         GetNode<HScrollBar>("MenuBox/Empty/Scr_Sound").Value = (double)config.GetValue("Settings", "sounds_value");
         GetNode<CheckButton>("MenuBox/Empty/B_FullScreen").ButtonPressed = (bool)config.GetValue("Settings", "Fullscreen");
+        GetNode<Label>("TopMenu/TopLineBox/HealthBoxWithNameClass/NameClass").Text = $"{MyHero.Name}";
+        GetNode<Label>("TopMenu/TopLineBox/HealthBoxWithNameClass/Money/CurrentMoney").Text = $"{MyHero.Gold}";
+        GetNode<Label>("TopMenu/TopLineBox/HealthBoxWithNameClass/Health/Health2").Text = $"{MyHero.CurrentHealth}/{MyHero.MaxHealth}";
     }
-    
+
     private void _on_deck_of_cards_pressed()
     {
         GetNode<Sprite2D>("HeroDeckBox").Visible = true;
@@ -22,7 +28,7 @@ public partial class Battle : Node2D
     {
         GetNode<Sprite2D>("MenuBox").Visible = true;
     }
-    
+
     private void _on_quit_deck_pressed()
     {
         GetNode<Sprite2D>("HeroDeckBox").Visible = false;

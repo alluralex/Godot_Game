@@ -78,19 +78,18 @@ public partial class HeroChoose : Node2D
 
     private void _on_start_run_pressed()
     {
-        //Hero hero = new Hero();
-        //if (stateMage.Visible == true)
-        //{
-        //    hero.Class = Mage_C;
-        //}
-        //if (stateArcher.Visible == true)
-        //{
-        //    hero.Class = Archer_C;
-        //}
-        //if (stateWarrior.Visible == true)
-        //{
-        //    hero.Class = Warrior_C;
-        //}
+        if (stateMage.Visible == true)
+        {
+            CurrentHero.Hero = new Mage();
+        }
+        if (stateArcher.Visible == true)
+        {
+            CurrentHero.Hero = new Archer();
+        }
+        if (stateWarrior.Visible == true)
+        {
+            CurrentHero.Hero = new Warrior();
+        }
         GetTree().ChangeSceneToFile("res://scenes/Battle/battle.tscn");
     }
 }

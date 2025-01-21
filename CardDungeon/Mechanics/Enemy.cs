@@ -23,6 +23,8 @@ namespace CardDungeonGame.scenes.Map
 
         public List<Effect> Effects { get; set; }
 
+        public string Sprite { get; set; }
+
         public void TakeDamage(int damage)
         {
             Dodge_Effect find = (Dodge_Effect)Effects.FirstOrDefault(s => s.Title == "Увернуться");
