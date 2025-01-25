@@ -35,7 +35,7 @@ public partial class Heroes : Node
             Cards = new List<Card> { };
             Class = Warrior_C;
             
-            Sprite = "warrior";
+            Sprite = "res://Heroes/Warrior/hero_warrior.tscn";
         }
 
     }
@@ -48,6 +48,8 @@ public partial class Heroes : Node
             CurrentHealth = MaxHealth;
             Cards = new List<Card> { };
             Class = Archer_C;
+
+            Sprite = "res://Heroes/Archer/hero_archer.tscn";
         }
     }
     public class Mage : Hero
@@ -59,6 +61,8 @@ public partial class Heroes : Node
             CurrentHealth = MaxHealth;
             Cards = new List<Card> { };
             Class = Mage_C;
+
+            Sprite = "res://Heroes/Mage/hero_mage.tscn";
         }
     }
 }
