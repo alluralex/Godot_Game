@@ -41,6 +41,10 @@ folder_colors={
 "res://Heroes/Warrior/": "red"
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [layer_names]
 
 2d_physics/layer_1="card_target_selector"

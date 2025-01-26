@@ -267,4 +267,5 @@ texture_filter = 1
 [node name="a_sprites" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_808wo")
 animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.461011
