@@ -649,7 +649,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ikyyt")
 }],
 "loop": true,
-"name": &"Attack_1_NoMove",
+"name": &"attack_1_NoMove",
 "speed": 5.0
 }, {
 "frames": [{
@@ -672,7 +672,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_g6pe7")
 }],
 "loop": true,
-"name": &"Attack_1_WithMove",
+"name": &"attack_1_WithMove",
 "speed": 9.0
 }, {
 "frames": [{
@@ -689,7 +689,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_hp66d")
 }],
 "loop": true,
-"name": &"Attack_2",
+"name": &"attack_2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -706,7 +706,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_8pnrk")
 }],
 "loop": true,
-"name": &"Attack_2_NoMove",
+"name": &"attack_2_NoMove",
 "speed": 5.0
 }, {
 "frames": [{
@@ -741,7 +741,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_m8iwl")
 }],
 "loop": true,
-"name": &"Attack_Combo_NoMove",
+"name": &"attack_Combo_NoMove",
 "speed": 5.0
 }, {
 "frames": [{
@@ -776,7 +776,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_k7ds1")
 }],
 "loop": true,
-"name": &"Attack_Combo_WithMove",
+"name": &"attack_Combo_WithMove",
 "speed": 5.0
 }, {
 "frames": [{
@@ -784,7 +784,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3s8mf")
 }],
 "loop": true,
-"name": &"Crounch",
+"name": &"crounch",
 "speed": 5.0
 }, {
 "frames": [{
@@ -801,7 +801,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_32bgv")
 }],
 "loop": true,
-"name": &"Crounch_Attack",
+"name": &"crounch_Attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -815,7 +815,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_rbmyg")
 }],
 "loop": true,
-"name": &"Crounch_Full",
+"name": &"crounch_Full",
 "speed": 5.0
 }, {
 "frames": [{
@@ -823,7 +823,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_uy1qk")
 }],
 "loop": true,
-"name": &"Crounch_Transition",
+"name": &"crounch_Transition",
 "speed": 5.0
 }, {
 "frames": [{
@@ -852,7 +852,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_j1g5c")
 }],
 "loop": true,
-"name": &"Crounch_Walk",
+"name": &"crounch_Walk",
 "speed": 5.0
 }, {
 "frames": [{
@@ -863,7 +863,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_lto73")
 }],
 "loop": true,
-"name": &"Dash",
+"name": &"dash",
 "speed": 5.0
 }, {
 "frames": [{
@@ -898,7 +898,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_fw10b")
 }],
 "loop": true,
-"name": &"Death_NoMove",
+"name": &"death_NoMove",
 "speed": 5.0
 }, {
 "frames": [{
@@ -933,7 +933,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_l3yj3")
 }],
 "loop": true,
-"name": &"Death_WithMove",
+"name": &"death_WithMove",
 "speed": 5.0
 }, {
 "frames": [{
@@ -947,7 +947,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ds7u8")
 }],
 "loop": true,
-"name": &"Fall",
+"name": &"fall",
 "speed": 5.0
 }, {
 "frames": [{
@@ -955,7 +955,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_c8jue")
 }],
 "loop": true,
-"name": &"Hit",
+"name": &"hit",
 "speed": 5.0
 }, {
 "frames": [{
@@ -990,7 +990,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_u7nid")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1004,7 +1004,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_q0fb0")
 }],
 "loop": true,
-"name": &"Jump",
+"name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1015,7 +1015,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_e71t7")
 }],
 "loop": true,
-"name": &"Jump_Fall",
+"name": &"jump_Fall",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1056,7 +1056,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_obfr7")
 }],
 "loop": true,
-"name": &"Roll",
+"name": &"roll",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1091,7 +1091,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_54s2g")
 }],
 "loop": true,
-"name": &"Run",
+"name": &"run",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1102,7 +1102,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_nl1hl")
 }],
 "loop": true,
-"name": &"Slide",
+"name": &"slide",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1119,7 +1119,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_sei4f")
 }],
 "loop": true,
-"name": &"Slide_Full",
+"name": &"slide_Full",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1127,7 +1127,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_xcw73")
 }],
 "loop": true,
-"name": &"Slide_TransitionEnd",
+"name": &"slide_TransitionEnd",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1135,7 +1135,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_e63u4")
 }],
 "loop": true,
-"name": &"Slide_TransitionStart",
+"name": &"slide_TransitionStart",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1149,7 +1149,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bcfpo")
 }],
 "loop": true,
-"name": &"TurnAround",
+"name": &"turnAround",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1175,7 +1175,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ghmcd")
 }],
 "loop": true,
-"name": &"WallClimb",
+"name": &"wallClimb",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1201,7 +1201,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_g0ouh")
 }],
 "loop": true,
-"name": &"WallClimb_NoMove",
+"name": &"wallClimb_NoMove",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1209,7 +1209,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_twmqm")
 }],
 "loop": true,
-"name": &"WallHang",
+"name": &"wallHang",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1223,7 +1223,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_qmso8")
 }],
 "loop": true,
-"name": &"WallSlide",
+"name": &"wallSlide",
 "speed": 5.0
 }]
 
@@ -1233,4 +1233,6 @@ texture_filter = 1
 [node name="WH_Sprites" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_uxcpf")
-animation = &"Slide_Full"
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.406137

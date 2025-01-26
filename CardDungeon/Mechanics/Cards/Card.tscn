@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwjpmgbkoaxwi"]
+
+[ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="1_l78m4"]
+[ext_resource type="Script" path="res://Mechanics/Cards/Drag.cs" id="1_yo24u"]
+[ext_resource type="Texture2D" uid="uid://7yfdqw552w8g" path="res://BackGrounds/Menu/background1.png" id="2_dkjmk"]
+
+[node name="Card" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1102.0
+offset_bottom = -576.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TGUI" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 1.0
+offset_right = 48.0
+offset_bottom = 70.0
+script = ExtResource("1_yo24u")
+
+[node name="Card_png" type="Sprite2D" parent="TGUI"]
+position = Vector2(23.5, 34.96)
+scale = Vector2(0.102083, 0.10925)
+texture = ExtResource("1_l78m4")
+
+[node name="Description" type="Label" parent="TGUI/Card_png"]
+offset_left = -152.0
+offset_top = 129.0
+offset_right = 278.0
+offset_bottom = 211.0
+text = "Error"
+
+[node name="Title" type="Label" parent="TGUI/Card_png"]
+offset_left = -113.0
+offset_top = -283.0
+offset_right = 122.0
+offset_bottom = -260.0
+text = "Error"
+
+[node name="Cost" type="Label" parent="TGUI/Card_png"]
+offset_left = -220.408
+offset_top = -301.693
+offset_right = -200.408
+offset_bottom = -274.693
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="TGUI/Card_png"]
+offset_left = -64.0
+offset_top = 101.0
+offset_right = 63.0
+offset_bottom = 128.0
+text = "Error"
+
+[node name="Image" type="Sprite2D" parent="TGUI/Card_png"]
+position = Vector2(-4.89798, -95.7437)
+scale = Vector2(0.265306, 0.553013)
+texture = ExtResource("2_dkjmk")
+
+[connection signal="gui_input" from="TGUI" to="TGUI" method="_on_gui_input"]

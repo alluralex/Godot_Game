@@ -53,7 +53,7 @@ public partial class HeroChoose : Node2D
     }
     private void _on_button_warrior_mouse_entered()
     {
-        GetNode<AnimatedSprite2D>("Heroes/Button_Warrior/Circle_Warrior/w_sprites").Animation = "walk";
+        GetNode<AnimatedSprite2D>("Heroes/Button_Warrior/Circle_Warrior/w_sprites").Animation = "run";
     }
     private void _on_button_warrior_mouse_exited()
     {

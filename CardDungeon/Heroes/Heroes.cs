@@ -35,7 +35,8 @@ public partial class Heroes : Node
             Cards = new List<Card> { };
             Class = Warrior_C;
             
-            Sprite = "res://Heroes/Warrior/hero_warrior.tscn";
+            Sprite = "res://Heroes/Warrior/warrior_hero_good.tscn";
+
         }
 
     }
