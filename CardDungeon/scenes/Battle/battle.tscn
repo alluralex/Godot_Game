@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://ccu1akifebouk"]
+[gd_scene load_steps=65 format=4 uid="uid://ccu1akifebouk"]
 
 [ext_resource type="Script" path="res://scenes/Battle/Battle.cs" id="1_cn07o"]
 [ext_resource type="Texture2D" uid="uid://dvkmufx6fm6xv" path="res://BackGrounds/Menu/mainlev_build.png" id="1_qbh7e"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/EXIT.png" id="13_mxmqg"]
 [ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/Back.png" id="15_qwucn"]
 [ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/GALKA.png" id="16_4iqmv"]
-[ext_resource type="PackedScene" uid="uid://bwjpmgbkoaxwi" path="res://Mechanics/Cards/Card.tscn" id="17_6huce"]
 [ext_resource type="Texture2D" uid="uid://lmd44sbd248p" path="res://Photos/DeckOfCard.png" id="18_t54kb"]
 [ext_resource type="Texture2D" uid="uid://cftq7mpbvsyia" path="res://Photos/quit.png" id="19_j5a5y"]
 
@@ -3453,12 +3452,6 @@ scale = Vector2(0.0687999, 0.119768)
 size_flags_horizontal = 10
 size_flags_vertical = 2
 icon = ExtResource("19_j5a5y")
-
-[node name="Card" parent="." instance=ExtResource("17_6huce")]
-offset_left = 560.0
-offset_top = 532.0
-offset_right = 560.0
-offset_bottom = 532.0
 
 [connection signal="pressed" from="TopMenu/TopLineBox/EscapeButton" to="." method="_on_escape_button_pressed"]
 [connection signal="pressed" from="TopMenu/DeckOfCards" to="." method="_on_deck_of_cards_pressed"]
