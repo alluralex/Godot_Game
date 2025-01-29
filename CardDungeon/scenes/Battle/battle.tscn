@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://ccu1akifebouk"]
+[gd_scene load_steps=64 format=4 uid="uid://ccu1akifebouk"]
 
 [ext_resource type="Script" path="res://scenes/Battle/Battle.cs" id="1_cn07o"]
 [ext_resource type="Texture2D" uid="uid://dvkmufx6fm6xv" path="res://BackGrounds/Menu/mainlev_build.png" id="1_qbh7e"]
