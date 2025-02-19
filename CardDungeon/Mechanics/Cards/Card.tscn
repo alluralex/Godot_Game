@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="1_l78m4"]
 [ext_resource type="Script" path="res://Mechanics/Cards/Drag.cs" id="1_yo24u"]
-[ext_resource type="Texture2D" uid="uid://7yfdqw552w8g" path="res://BackGrounds/Menu/background1.png" id="2_dkjmk"]
+[ext_resource type="Texture2D" uid="uid://7yfdqw552w8g" path="res://Photos/BackGrounds/Menu/background1.png" id="2_dkjmk"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1, 1)

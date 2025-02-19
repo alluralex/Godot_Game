@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="CardDungeon"
-run/main_scene="res://BackGrounds/Menu/menu.tscn"
+run/main_scene="res://scenes/Menu/menu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
-config/icon="res://Photos/shield.png"
+config/icon="res://Photos/IconLOL.png"
 
 [display]
 
@@ -31,14 +31,25 @@ project/assembly_name="Сохранялкагодота"
 [file_customization]
 
 folder_colors={
-"res://BackGrounds/Menu/": "teal",
-"res://Enemies/First_loc/": "green",
-"res://Enemies/First_loc/Boss_Demon/": "red",
-"res://Enemies/Second_loc/": "yellow",
-"res://Enemies/Second_loc/FireWorm/": "red",
-"res://Heroes/Archer/": "green",
-"res://Heroes/Mage/": "purple",
-"res://Heroes/Warrior/": "red"
+"res://Creatures/": "pink",
+"res://Creatures/Enemies/": "red",
+"res://Creatures/Enemies/First_loc/": "green",
+"res://Creatures/Enemies/First_loc/Boss_Demon/": "red",
+"res://Creatures/Enemies/Second_loc/": "yellow",
+"res://Creatures/Enemies/Second_loc/FireWorm/": "red",
+"res://Creatures/Heroes/": "yellow",
+"res://Creatures/Heroes/Archer/": "green",
+"res://Creatures/Heroes/Mage/": "purple",
+"res://Creatures/Heroes/Warrior/": "red",
+"res://Mechanics/": "teal",
+"res://Photos/": "purple",
+"res://Photos/BackGrounds/Menu/": "teal",
+"res://scenes/": "red",
+"res://scenes/Battle/": "red",
+"res://scenes/ChooseHero/": "blue",
+"res://scenes/Cutscene_Elements/": "purple",
+"res://scenes/Map/": "orange",
+"res://scenes/Menu/": "green"
 }
 
 [input_devices]

@@ -75,7 +75,7 @@ public partial class Battle : Node2D
 
     private void _on_b_exit_pressed()
     {
-        GetTree().ChangeSceneToFile("res://BackGrounds/Menu/menu.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/Menu/menu.tscn");
     }
 
     private void _on_b_back_pressed()
