@@ -2,7 +2,7 @@ using CardDungeonGame.scenes.Map;
 using Godot;
 using System;
 using System.Collections.Generic;
-using Сохранялкагодота.Mechanics;
+using Game.Mechanics;
 
 public partial class Heroes : Node
 {
@@ -32,10 +32,15 @@ public partial class Heroes : Node
             Name = "Мечник";
             MaxHealth = 65;
             CurrentHealth = MaxHealth;
-            Cards = new List<Card> { };
+            Cards = new()
+			{
+				new Warrior_SimpleAttack_Bronze(),
+				new Warrior_Lunge_Bronze(),
+				new Warrior_SimpleDefence_Bronze()
+			};
             Class = Warrior_C;
             
-            Sprite = "res://Heroes/Warrior/warrior_hero_good.tscn";
+            Sprite = "res://Creatures/Heroes/Warrior/warrior_hero_good.tscn";
 
         }
 
@@ -50,7 +55,7 @@ public partial class Heroes : Node
             Cards = new List<Card> { };
             Class = Archer_C;
 
-            Sprite = "res://Heroes/Archer/hero_archer.tscn";
+            Sprite = "res://Creatures/Heroes/Archer/hero_archer.tscn";
         }
     }
     public class Mage : Hero
@@ -63,7 +68,7 @@ public partial class Heroes : Node
             Cards = new List<Card> { };
             Class = Mage_C;
 
-            Sprite = "res://Heroes/Mage/hero_mage.tscn";
+            Sprite = "res://Creatures/Heroes/Mage/hero_mage.tscn";
         }
     }
 }

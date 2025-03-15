@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwjpmgbkoaxwi"]
+[gd_scene load_steps=6 format=3 uid="uid://bwjpmgbkoaxwi"]
 
 [ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="1_l78m4"]
 [ext_resource type="Script" path="res://Mechanics/Cards/Drag.cs" id="1_yo24u"]
 [ext_resource type="Texture2D" uid="uid://7yfdqw552w8g" path="res://Photos/BackGrounds/Menu/background1.png" id="2_dkjmk"]
+[ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="4_38fmx"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_hx8uw"]
+font = ExtResource("4_38fmx")
+font_size = 30
+shadow_size = 0
+
+[node name="OneCard" type="Node2D"]
 position = Vector2(1, 1)
 
 [node name="Card" type="Control" parent="."]
@@ -27,6 +33,7 @@ scale = Vector2(0.102083, 0.10925)
 texture = ExtResource("1_l78m4")
 
 [node name="Description" type="Label" parent="Card/TGUI/Card_png"]
+unique_name_in_owner = true
 offset_left = -152.0
 offset_top = 129.0
 offset_right = 278.0
@@ -34,13 +41,18 @@ offset_bottom = 211.0
 text = "Error"
 
 [node name="Title" type="Label" parent="Card/TGUI/Card_png"]
-offset_left = -113.0
-offset_top = -283.0
-offset_right = 122.0
-offset_bottom = -260.0
+unique_name_in_owner = true
+offset_left = -112.653
+offset_top = -283.387
+offset_right = 122.347
+offset_bottom = -241.387
 text = "Error"
+label_settings = SubResource("LabelSettings_hx8uw")
+horizontal_alignment = 1
+uppercase = true
 
 [node name="Cost" type="Label" parent="Card/TGUI/Card_png"]
+unique_name_in_owner = true
 offset_left = -220.408
 offset_top = -301.693
 offset_right = -200.408
@@ -50,6 +62,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Type" type="Label" parent="Card/TGUI/Card_png"]
+unique_name_in_owner = true
 offset_left = -64.0
 offset_top = 101.0
 offset_right = 63.0
@@ -57,8 +70,11 @@ offset_bottom = 128.0
 text = "Error"
 
 [node name="Image" type="Sprite2D" parent="Card/TGUI/Card_png"]
+unique_name_in_owner = true
 position = Vector2(-4.89798, -95.7437)
 scale = Vector2(0.265306, 0.553013)
 texture = ExtResource("2_dkjmk")
 
 [connection signal="gui_input" from="Card/TGUI" to="Card/TGUI" method="_on_gui_input"]
+[connection signal="mouse_entered" from="Card/TGUI" to="Card/TGUI" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Card/TGUI" to="Card/TGUI" method="_on_mouse_exited"]

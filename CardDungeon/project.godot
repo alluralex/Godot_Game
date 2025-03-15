@@ -26,7 +26,7 @@ mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 
 [dotnet]
 
-project/assembly_name="Сохранялкагодота"
+project/assembly_name="Game"
 
 [file_customization]
 

@@ -7,10 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Сохранялкагодота.Mechanics
+namespace Game.Mechanics
 {
-
-
     public abstract class Card
     {
         public const int Bronze = 1;
@@ -28,23 +26,14 @@ namespace Сохранялкагодота.Mechanics
         public const string Archer = "ЛУЧНИК";
 
         public string Title { get; set; }
-
         public string Description { get; set; }
-
         public string Class { get; set; }
-
         public string Type { get; set; }
-
         public string Image { get; set; }
-
         public int Rarity { get; set; }
-
         public int? EnergyCost { get; set; }
-
         public int? DealDamage { get; set; }
-
         public int? DealArmor { get; set; }
-
         public List<Effect>? Effects { get; set; }
 
         public virtual void Use(Creature dealer, Creature target)
@@ -55,7 +44,6 @@ namespace Сохранялкагодота.Mechanics
 
     public class Warrior_SimpleAttack_Bronze : Card
     {
-
         public Warrior_SimpleAttack_Bronze()
         {
             Title = "Атака";
@@ -91,10 +79,9 @@ namespace Сохранялкагодота.Mechanics
 
     public class Warrior_Lunge_Bronze : Card
     {
-
         public Warrior_Lunge_Bronze()
         {
-            Title = "Защита";
+            Title = "Выпад";
             Description = $"Наносит {DealDamage} урона и оглушает противника на 1 ход";
             Type = AttackType;
             Rarity = Bronze;
@@ -102,7 +89,7 @@ namespace Сохранялкагодота.Mechanics
             DealDamage = 6;
             DealArmor = 0;
             Class = Warrior;
-            Effects.Add(new Stun_Effect(1));
+            //Effects.Add();
         }
         public override void Use(Creature dealer, Creature target)
         {

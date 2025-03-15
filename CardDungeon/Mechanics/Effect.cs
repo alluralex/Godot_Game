@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
 
-namespace Сохранялкагодота.Mechanics
+namespace Game.Mechanics
 {
 	public abstract class Effect
 	{
