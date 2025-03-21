@@ -13,14 +13,14 @@ config_version=5
 config/name="CardDungeon"
 run/main_scene="res://scenes/Menu/menu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
-config/icon="res://Photos/IconLOL.png"
+config/icon="res://Photos/InGamePhotos/IconLOL.png"
 
 [display]
 
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
-mouse_cursor/custom_image="res://Photos/hand_and_ring.png"
+mouse_cursor/custom_image="res://Photos/InGamePhotos/hand_and_ring.png"
 mouse_cursor/custom_image_hotspot=Vector2(10, 0)
 mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 

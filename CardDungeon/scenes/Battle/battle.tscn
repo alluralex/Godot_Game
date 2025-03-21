@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/MenuButtons/Settings.png" id="12_v8os3"]
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/MenuButtons/EXIT.png" id="13_mxmqg"]
 [ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/MenuButtons/Back.png" id="15_qwucn"]
-[ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/MenuButtons/GALKA.png" id="16_4iqmv"]
+[ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/MenuButtons/Confirm.png" id="16_4iqmv"]
 [ext_resource type="Texture2D" uid="uid://lmd44sbd248p" path="res://Photos/InGamePhotos/DeckOfCard.png" id="18_t54kb"]
 [ext_resource type="Texture2D" uid="uid://cftq7mpbvsyia" path="res://Photos/InGamePhotos/quit.png" id="19_j5a5y"]
 

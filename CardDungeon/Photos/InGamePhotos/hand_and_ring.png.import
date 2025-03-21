@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp34kragf88oq"
-path="res://.godot/imported/white_sqr.png-534975ce0620f38c9368b9ee571bed89.ctex"
+uid="uid://w850tmt5aeo4"
+path="res://.godot/imported/hand_and_ring.png-b732ddb99b7a4d0c59565367a87a0f29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Photos/white_sqr.png"
-dest_files=["res://.godot/imported/white_sqr.png-534975ce0620f38c9368b9ee571bed89.ctex"]
+source_file="res://Photos/InGamePhotos/hand_and_ring.png"
+dest_files=["res://.godot/imported/hand_and_ring.png-b732ddb99b7a4d0c59565367a87a0f29.ctex"]
 
 [params]
 

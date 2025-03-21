@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpl6sll48edcr"
-path="res://.godot/imported/IconLOL.png-37913395d22dcc4eee5e27a509d3f529.ctex"
+uid="uid://0v6tcg1irfjx"
+path="res://.godot/imported/shield.png-abd7c0f94caca776c36199c8f79bbe6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Photos/IconLOL.png"
-dest_files=["res://.godot/imported/IconLOL.png-37913395d22dcc4eee5e27a509d3f529.ctex"]
+source_file="res://Photos/InGamePhotos/shield.png"
+dest_files=["res://.godot/imported/shield.png-abd7c0f94caca776c36199c8f79bbe6f.ctex"]
 
 [params]
 

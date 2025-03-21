@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bg83a7lrrifq8" path="res://Photos/MenuButtons/Settings.png" id="5_nbfwa"]
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/MenuButtons/EXIT.png" id="6_cvtwq"]
 [ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/MenuButtons/Back.png" id="7_tp6hx"]
-[ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/MenuButtons/GALKA.png" id="8_kmj73"]
-[ext_resource type="Texture2D" uid="uid://dp34kragf88oq" path="res://Photos/white_sqr.png" id="9_qg07k"]
-[ext_resource type="Texture2D" uid="uid://0v6tcg1irfjx" path="res://Photos/shield.png" id="10_jq4ur"]
+[ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/MenuButtons/Confirm.png" id="8_kmj73"]
+[ext_resource type="Texture2D" uid="uid://dp34kragf88oq" path="res://Photos/InGamePhotos/white_sqr.png" id="9_qg07k"]
+[ext_resource type="Texture2D" uid="uid://0v6tcg1irfjx" path="res://Photos/InGamePhotos/shield.png" id="10_jq4ur"]
 [ext_resource type="AudioStream" uid="uid://7eeuwhy8ha7u" path="res://scenes/Menu/MenuMusic.mp3" id="11_mp16p"]
 [ext_resource type="PackedScene" uid="uid://dqpfk78ur2uew" path="res://Photos/BackGrounds/Menu/bg.tscn" id="12_4v2ob"]
 

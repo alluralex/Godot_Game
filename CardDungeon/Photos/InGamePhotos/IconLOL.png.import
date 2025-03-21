@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0saxrj18s4p1"
-path="res://.godot/imported/GALKA.png-2cbc1709b5cd7d700249f6954cfb2b10.ctex"
+uid="uid://dpl6sll48edcr"
+path="res://.godot/imported/IconLOL.png-fec1235600019c03897464c2ca847b99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Photos/MenuButtons/GALKA.png"
-dest_files=["res://.godot/imported/GALKA.png-2cbc1709b5cd7d700249f6954cfb2b10.ctex"]
+source_file="res://Photos/InGamePhotos/IconLOL.png"
+dest_files=["res://.godot/imported/IconLOL.png-fec1235600019c03897464c2ca847b99.ctex"]
 
 [params]
 
