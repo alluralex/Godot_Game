@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://ccu1akifebouk"]
+[gd_scene load_steps=66 format=4 uid="uid://ccu1akifebouk"]
 
 [ext_resource type="Script" path="res://scenes/Battle/Battle.cs" id="1_cn07o"]
 [ext_resource type="Texture2D" uid="uid://dvkmufx6fm6xv" path="res://Photos/BackGrounds/Menu/mainlev_build.png" id="1_qbh7e"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://nuwycjuy8o8i" path="res://Photos/MenuButtons/EXIT.png" id="13_mxmqg"]
 [ext_resource type="Texture2D" uid="uid://c35yfpa2kj20w" path="res://Photos/MenuButtons/Back.png" id="15_qwucn"]
 [ext_resource type="Texture2D" uid="uid://d0saxrj18s4p1" path="res://Photos/MenuButtons/Confirm.png" id="16_4iqmv"]
+[ext_resource type="PackedScene" uid="uid://bwjpmgbkoaxwi" path="res://Mechanics/Cards/Card.tscn" id="18_nj8ht"]
 [ext_resource type="Texture2D" uid="uid://lmd44sbd248p" path="res://Photos/InGamePhotos/DeckOfCard.png" id="18_t54kb"]
 [ext_resource type="Texture2D" uid="uid://cftq7mpbvsyia" path="res://Photos/InGamePhotos/quit.png" id="19_j5a5y"]
 
@@ -2551,6 +2552,26 @@ icon = ExtResource("19_j5a5y")
 [node name="Zone_Use" type="CollisionShape2D" parent="Area_Use"]
 position = Vector2(550, 200)
 shape = SubResource("RectangleShape2D_fk7c0")
+
+[node name="Hand" type="HBoxContainer" parent="."]
+layout_direction = 3
+offset_left = -440.0
+offset_top = 440.0
+offset_right = -288.0
+offset_bottom = 510.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="OneCard" parent="Hand" instance=ExtResource("18_nj8ht")]
+layout_mode = 2
+
+[node name="OneCard2" parent="Hand" instance=ExtResource("18_nj8ht")]
+layout_mode = 2
+
+[node name="OneCard3" parent="Hand" instance=ExtResource("18_nj8ht")]
+layout_mode = 2
 
 [connection signal="pressed" from="TopMenu/TopLineBox/EscapeButton" to="." method="_on_escape_button_pressed"]
 [connection signal="pressed" from="TopMenu/DeckOfCards" to="." method="_on_deck_of_cards_pressed"]
