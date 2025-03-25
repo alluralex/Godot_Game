@@ -1,14 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwjpmgbkoaxwi"]
+[gd_scene load_steps=9 format=3 uid="uid://bwjpmgbkoaxwi"]
 
 [ext_resource type="Texture2D" uid="uid://t2ukfx270l1p" path="res://Mechanics/pixil-frame-0 (1).png" id="1_l78m4"]
 [ext_resource type="Script" path="res://Mechanics/Cards/Drag.cs" id="1_yo24u"]
 [ext_resource type="Texture2D" uid="uid://7yfdqw552w8g" path="res://Photos/BackGrounds/Menu/background1.png" id="2_dkjmk"]
 [ext_resource type="FontFile" uid="uid://d2juvulibmmxv" path="res://Pixel-Font.ttf" id="4_38fmx"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_hx8uw"]
+[sub_resource type="LabelSettings" id="LabelSettings_sxnuv"]
 font = ExtResource("4_38fmx")
 font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_hx8uw"]
+font = ExtResource("4_38fmx")
+font_size = 50
 shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_glafw"]
+font = ExtResource("4_38fmx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_331io"]
+font = ExtResource("4_38fmx")
+font_size = 20
 
 [node name="OneCard" type="Control"]
 custom_minimum_size = Vector2(48, 70)
@@ -19,69 +30,67 @@ offset_top = 1.0
 offset_right = 49.0
 offset_bottom = 71.0
 
-[node name="Card" type="Control" parent="."]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 3
-anchors_preset = 0
-offset_right = 100.0
-offset_bottom = 100.0
-
-[node name="TGUI" type="Panel" parent="Card"]
+[node name="TGUI" type="Panel" parent="." node_paths=PackedStringArray("Card")]
 unique_name_in_owner = true
 layout_mode = 0
 offset_top = 1.0
 offset_right = 48.0
 offset_bottom = 71.0
 script = ExtResource("1_yo24u")
+Card = NodePath("..")
 
-[node name="Card_png" type="Sprite2D" parent="Card/TGUI"]
+[node name="Card_png" type="Sprite2D" parent="TGUI"]
 position = Vector2(23.5, 34.96)
 scale = Vector2(0.102083, 0.10925)
 texture = ExtResource("1_l78m4")
 
-[node name="Description" type="Label" parent="Card/TGUI/Card_png"]
+[node name="Description" type="Label" parent="TGUI/Card_png"]
 unique_name_in_owner = true
-offset_left = -152.0
-offset_top = 129.0
-offset_right = 278.0
-offset_bottom = 211.0
+offset_left = -151.837
+offset_top = 128.513
+offset_right = 152.163
+offset_bottom = 210.513
 text = "Error"
+label_settings = SubResource("LabelSettings_sxnuv")
 
-[node name="Title" type="Label" parent="Card/TGUI/Card_png"]
+[node name="Title" type="Label" parent="TGUI/Card_png"]
 unique_name_in_owner = true
 offset_left = -112.653
-offset_top = -283.387
+offset_top = -310.847
 offset_right = 122.347
-offset_bottom = -241.387
+offset_bottom = -259.847
 text = "Error"
 label_settings = SubResource("LabelSettings_hx8uw")
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Cost" type="Label" parent="Card/TGUI/Card_png"]
+[node name="Cost" type="Label" parent="TGUI/Card_png"]
 unique_name_in_owner = true
 offset_left = -220.408
 offset_top = -301.693
 offset_right = -200.408
 offset_bottom = -274.693
 text = "0"
+label_settings = SubResource("LabelSettings_glafw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Card/TGUI/Card_png"]
+[node name="Type" type="Label" parent="TGUI/Card_png"]
 unique_name_in_owner = true
 offset_left = -64.0
-offset_top = 101.0
-offset_right = 63.0
+offset_top = 108.0
+offset_right = 73.0
 offset_bottom = 128.0
 text = "Error"
+label_settings = SubResource("LabelSettings_331io")
+horizontal_alignment = 1
 
-[node name="Image" type="Sprite2D" parent="Card/TGUI/Card_png"]
+[node name="Image" type="Sprite2D" parent="TGUI/Card_png"]
 unique_name_in_owner = true
 position = Vector2(-4.89798, -95.7437)
 scale = Vector2(0.265306, 0.553013)
 texture = ExtResource("2_dkjmk")
 
-[connection signal="gui_input" from="Card/TGUI" to="Card/TGUI" method="_on_gui_input"]
-[connection signal="mouse_entered" from="Card/TGUI" to="Card/TGUI" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Card/TGUI" to="Card/TGUI" method="_on_mouse_exited"]
+[connection signal="gui_input" from="TGUI" to="TGUI" method="_on_gui_input"]
+[connection signal="mouse_entered" from="TGUI" to="TGUI" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TGUI" to="TGUI" method="_on_mouse_exited"]

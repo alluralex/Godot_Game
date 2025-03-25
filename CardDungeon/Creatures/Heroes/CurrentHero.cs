@@ -3,5 +3,5 @@ using System;
 
 public partial class CurrentHero : Node
 {
-    public static Heroes.Hero Hero { get; set; }
+    public static Hero Hero { get; set; }
 }

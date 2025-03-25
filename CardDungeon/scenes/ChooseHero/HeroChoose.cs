@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using static Heroes;
 
 public partial class HeroChoose : Node2D
 {

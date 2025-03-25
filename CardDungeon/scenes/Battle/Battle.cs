@@ -5,9 +5,11 @@ using Game.Mechanics;
 
 public partial class Battle : Node2D
 {
-	public static Heroes.Hero MyHero;
-	private List<Node2D> Cards = new();
-	public static Node2D SelectedCard;
+	public Hero MyHero { get; set; }
+	private List<Control> Cards { get; set; } = new();
+	public static Control SelectedCard { get; set; } = new();
+	[Export]
+	public Control Hand { get; set; }
 
 	public override void _Ready()
 	{
@@ -25,10 +27,10 @@ public partial class Battle : Node2D
 		create_hero();
 		create_cards();
 	}
-	public void _on_area_use_mouse_entered()
-	{
-		SelectedCard.Scale = new Vector2(5, 5);
-	}
+	//public void _on_area_use_mouse_entered()
+	//{
+	//	SelectedCard.Scale = new Vector2(5, 5);
+	//}
 
 	void create_cards()
 	{
@@ -37,20 +39,20 @@ public partial class Battle : Node2D
 			GD.Print(card);
 			PackedScene cards = GD.Load<PackedScene>("res://Mechanics/Cards/Card.tscn");
 
-			Node2D cardsInstance = (Node2D)cards.Instantiate();
+			Control cardsInstance = (Control)cards.Instantiate();
 
-			cardsInstance.Translate(new Vector2(200, 200));
 			cardsInstance.Scale = new Vector2(3, 3);
-
 			cardsInstance.Name = card.Title;
 
-			GetTree().Root.AddChild(cardsInstance);
+			Hand.AddChild(cardsInstance);
+			
+			GD.Print(Cards);
 
 			Cards.Add(cardsInstance);
 
-			GetParent().GetNode<Label>($"{card.Title}/Card/TGUI/Card_png/Title").Text = card.Title;
-			GetParent().GetNode<Label>($"{card.Title}/Card/TGUI/Card_png/Description").Text = card.Description;
-			GetParent().GetNode<Label>($"{card.Title}/Card/TGUI/Card_png/Cost").Text = card.EnergyCost.ToString();
+			Hand.GetNode<Label>($"{card.Title}/TGUI/Card_png/Title").Text = card.Title;
+			Hand.GetNode<Label>($"{card.Title}/TGUI/Card_png/Description").Text = card.Description;
+			Hand.GetNode<Label>($"{card.Title}/TGUI/Card_png/Cost").Text = card.EnergyCost.ToString();
 			//GetParent().GetNode<Label>($"{card.Title}/Card/TGUI/Card_png/Image").Text = card.Image;
 		}
 	}
