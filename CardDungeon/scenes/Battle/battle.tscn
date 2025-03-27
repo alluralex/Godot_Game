@@ -2236,9 +2236,12 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_vkvog")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fk7c0"]
 size = Vector2(670, 256)
 
-[node name="battle" type="Node2D" node_paths=PackedStringArray("Hand")]
+[node name="battle" type="Node2D" node_paths=PackedStringArray("Hand", "NameClass", "CurrentMoney", "Health")]
 script = ExtResource("1_cn07o")
 Hand = NodePath("Hand")
+NameClass = NodePath("TopMenu/TopLineBox/HealthBoxWithNameClass/NameClass")
+CurrentMoney = NodePath("TopMenu/TopLineBox/HealthBoxWithNameClass/Money/CurrentMoney")
+Health = NodePath("TopMenu/TopLineBox/HealthBoxWithNameClass/Health/Health2")
 
 [node name="FirstLayerBattle_1" type="TileMapLayer" parent="."]
 tile_set = ExtResource("2_nc0oy")

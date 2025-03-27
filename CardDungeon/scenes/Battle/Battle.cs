@@ -10,6 +10,12 @@ public partial class Battle : Node2D
 	public static Control SelectedCard { get; set; } = new();
 	[Export]
 	public Control Hand { get; set; }
+	[Export]
+	public Label NameClass {  get; set; }
+	[Export]
+	public Label CurrentMoney { get; set; }
+	[Export]
+	public Label Health { get; set; }
 
 	public override void _Ready()
 	{
@@ -21,9 +27,9 @@ public partial class Battle : Node2D
 		//GetNode<HScrollBar>("MenuBox/Empty/Scr_Sound").Value = (double)config.GetValue("Settings", "sounds_value");
 		//GetNode<CheckButton>("MenuBox/Empty/B_FullScreen").ButtonPressed = (bool)config.GetValue("Settings", "Fullscreen");
 
-		GetNode<Label>("TopMenu/TopLineBox/HealthBoxWithNameClass/NameClass").Text = $"{MyHero.Name}";
-		GetNode<Label>("TopMenu/TopLineBox/HealthBoxWithNameClass/Money/CurrentMoney").Text = $"{MyHero.Gold}";
-		GetNode<Label>("TopMenu/TopLineBox/HealthBoxWithNameClass/Health/Health2").Text = $"{MyHero.CurrentHealth}/{MyHero.MaxHealth}";
+		NameClass.Text = $"{MyHero.Name}";
+		CurrentMoney.Text = $"{MyHero.Gold}";
+		Health.Text = $"{MyHero.CurrentHealth}/{MyHero.MaxHealth}";
 		create_hero();
 		create_cards();
 	}
@@ -50,10 +56,11 @@ public partial class Battle : Node2D
 
 			Cards.Add(cardsInstance);
 
-			Hand.GetNode<Label>($"{card.Title}/TGUI/Card_png/Title").Text = card.Title;
-			Hand.GetNode<Label>($"{card.Title}/TGUI/Card_png/Description").Text = card.Description;
-			Hand.GetNode<Label>($"{card.Title}/TGUI/Card_png/Cost").Text = card.EnergyCost.ToString();
-			//GetParent().GetNode<Label>($"{card.Title}/Card/TGUI/Card_png/Image").Text = card.Image;
+			Hand.GetNode<Label>($"{card.Title}/%Title").Text = card.Title;
+			Hand.GetNode<Label>($"{card.Title}/%Description").Text = card.Description;
+			Hand.GetNode<Label>($"{card.Title}/%Cost").Text = card.EnergyCost.ToString();
+			Hand.GetNode<Label>($"{card.Title}/%Type").Text = card.Type;
+			Hand.GetNode<Sprite2D>($"{card.Title}/%Image").Texture.ResourcePath = card.Image;
 		}
 	}
 	void create_hero()
