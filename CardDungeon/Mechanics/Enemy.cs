@@ -43,9 +43,4 @@ namespace CardDungeonGame.scenes.Map
             CurrentHealth -= damage;
         }
     }
-    public class Enemy : Creature
-    {
-        //public bool Boss { get; set; } = false;
-        public bool EliteEnemy { get; set; }
-    }
 }

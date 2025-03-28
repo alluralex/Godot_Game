@@ -47,11 +47,11 @@ namespace Game.Mechanics
         public Warrior_SimpleAttack_Bronze()
         {
             Title = "Атака";
+            DealDamage = 8;
             Description = $"Наносит {DealDamage} урона";
             Type = AttackType;
             Rarity = Bronze;
             EnergyCost = 1;
-            DealDamage = 8;
             DealArmor = 0;
             Class = Warrior;
             Image = "res://.godot/imported/Eye Beast Attack1.png-ca48308122d7c2972ce8f7fa5e913bc1.ctex";
@@ -67,12 +67,12 @@ namespace Game.Mechanics
         public Warrior_SimpleDefence_Bronze()
         {
             Title = "Защита";
+            DealArmor = 6;
             Description = $"Даёт {DealArmor} брони";
             Type = DefenceType;
             Rarity = Bronze;
             EnergyCost = 1;
             DealDamage = 0;
-            DealArmor = 6;
             Class = Warrior;
         }
     }
@@ -82,11 +82,11 @@ namespace Game.Mechanics
         public Warrior_Lunge_Bronze()
         {
             Title = "Выпад";
+            DealDamage = 6;
             Description = $"Наносит {DealDamage} урона и оглушает противника на 1 ход";
             Type = AttackType;
             Rarity = Bronze;
             EnergyCost = 2;
-            DealDamage = 6;
             DealArmor = 0;
             Class = Warrior;
             //Effects.Add();
@@ -110,11 +110,11 @@ namespace Game.Mechanics
             public Warrior_FastAttack_Bronze()
             {
                 Title = "Быстрая атака";
+                DealDamage = 4;
                 Description = $"Наносит {DealDamage} урона, не требует энергию";
                 Type = AttackType;
                 Rarity = Bronze;
                 EnergyCost = 0;
-                DealDamage = 4;
                 DealArmor = 0;
                 Class = Warrior;
             }
@@ -154,8 +154,6 @@ namespace Game.Mechanics
                 Class = Warrior;
                 Effects.Add(new Dodge_Effect(2));
             }
-
-
         }
 
         public class Warrior_ShieldStrike_Iron : Card
@@ -183,11 +181,11 @@ namespace Game.Mechanics
             public Warrior_Cutting_Iron()
             {
                 Title = "Разрезание";
+                DealDamage = 12;
                 Description = $"Вы наносите {DealDamage} все противникам";
                 Type = AttackType;
                 Rarity = Iron;
                 EnergyCost = 2;
-                DealDamage = 12;
                 DealArmor = 0;
                 Class = Warrior;
             }

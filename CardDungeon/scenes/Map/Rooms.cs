@@ -1,4 +1,5 @@
 using CardDungeonGame.scenes.Map;
+using Game.Creatures;
 using Godot;
 using System;
 using System.Collections.Generic;

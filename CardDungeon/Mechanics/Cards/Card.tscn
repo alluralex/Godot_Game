@@ -31,6 +31,7 @@ offset_left = 1.0
 offset_top = 1.0
 offset_right = 49.0
 offset_bottom = 71.0
+pivot_offset = Vector2(24, 70)
 
 [node name="TGUI" type="Panel" parent="." node_paths=PackedStringArray("Card")]
 unique_name_in_owner = true
@@ -49,13 +50,13 @@ texture = ExtResource("1_l78m4")
 
 [node name="Description" type="Label" parent="TGUI/Card_png"]
 unique_name_in_owner = true
-offset_left = -151.837
-offset_top = 128.513
-offset_right = 152.163
-offset_bottom = 210.513
-text = "Error"
+offset_left = -152.0
+offset_top = 129.0
+offset_right = 152.0
+offset_bottom = 239.0
+text = "ERROR"
 label_settings = SubResource("LabelSettings_sxnuv")
-autowrap_mode = 1
+autowrap_mode = 2
 clip_text = true
 uppercase = true
 
@@ -98,6 +99,12 @@ unique_name_in_owner = true
 position = Vector2(-4.89798, -95.7437)
 scale = Vector2(0.265306, 0.553013)
 texture = ExtResource("2_dkjmk")
+
+[node name="Border" type="Line2D" parent="TGUI/Card_png"]
+unique_name_in_owner = true
+visible = false
+points = PackedVector2Array(-230, 311, 230, 311, 230, 0.3, 230, -310, -230, -310, -230, 320)
+width = 20.0
 
 [connection signal="gui_input" from="TGUI" to="TGUI" method="_on_gui_input"]
 [connection signal="mouse_entered" from="TGUI" to="TGUI" method="_on_mouse_entered"]

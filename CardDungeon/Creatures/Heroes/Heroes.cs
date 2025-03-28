@@ -33,6 +33,8 @@ public class Warrior : Hero
 			{
 				new Warrior_SimpleAttack_Bronze(),
 				new Warrior_Lunge_Bronze(),
+				new Warrior_SimpleDefence_Bronze(),
+				new Warrior_SimpleDefence_Bronze(),
 				new Warrior_SimpleDefence_Bronze()
 			};
 		Class = Warrior_C;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://ccu1akifebouk"]
+[gd_scene load_steps=64 format=4 uid="uid://ccu1akifebouk"]
 
 [ext_resource type="Script" path="res://scenes/Battle/Battle.cs" id="1_cn07o"]
 [ext_resource type="Texture2D" uid="uid://dvkmufx6fm6xv" path="res://Photos/BackGrounds/Menu/mainlev_build.png" id="1_qbh7e"]
@@ -2233,9 +2233,6 @@ VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_7cl6c")
 VScrollBar/styles/scroll = SubResource("StyleBoxFlat_btod2")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_vkvog")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk7c0"]
-size = Vector2(670, 256)
-
 [node name="battle" type="Node2D" node_paths=PackedStringArray("Hand", "NameClass", "CurrentMoney", "Health")]
 script = ExtResource("1_cn07o")
 Hand = NodePath("Hand")
@@ -2550,12 +2547,6 @@ size_flags_horizontal = 10
 size_flags_vertical = 2
 icon = ExtResource("19_j5a5y")
 
-[node name="Area_Use" type="Area2D" parent="."]
-
-[node name="Zone_Use" type="CollisionShape2D" parent="Area_Use"]
-position = Vector2(550, 200)
-shape = SubResource("RectangleShape2D_fk7c0")
-
 [node name="Hand" type="HBoxContainer" parent="."]
 unique_name_in_owner = true
 layout_direction = 3
@@ -2577,4 +2568,3 @@ alignment = 1
 [connection signal="pressed" from="MenuBox/Empty/B_Back" to="." method="_on_b_back_pressed"]
 [connection signal="pressed" from="MenuBox/Empty/B_SaveSettings" to="." method="_on_b_save_settings_pressed"]
 [connection signal="pressed" from="HeroDeckBox/QuitDeck" to="." method="_on_quit_deck_pressed"]
-[connection signal="mouse_entered" from="Area_Use" to="." method="_on_area_use_mouse_entered"]
