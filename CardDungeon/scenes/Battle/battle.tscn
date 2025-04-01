@@ -2233,9 +2233,10 @@ VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_7cl6c")
 VScrollBar/styles/scroll = SubResource("StyleBoxFlat_btod2")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_vkvog")
 
-[node name="battle" type="Node2D" node_paths=PackedStringArray("Hand", "NameClass", "CurrentMoney", "Health")]
+[node name="battle" type="Node2D" node_paths=PackedStringArray("Hand", "EnemyContainer", "NameClass", "CurrentMoney", "Health")]
 script = ExtResource("1_cn07o")
 Hand = NodePath("Hand")
+EnemyContainer = NodePath("EnemyContainer")
 NameClass = NodePath("TopMenu/TopLineBox/HealthBoxWithNameClass/NameClass")
 CurrentMoney = NodePath("TopMenu/TopLineBox/HealthBoxWithNameClass/Money/CurrentMoney")
 Health = NodePath("TopMenu/TopLineBox/HealthBoxWithNameClass/Health/Health2")
@@ -2548,16 +2549,27 @@ size_flags_vertical = 2
 icon = ExtResource("19_j5a5y")
 
 [node name="Hand" type="HBoxContainer" parent="."]
-unique_name_in_owner = true
 layout_direction = 3
-offset_left = -440.0
-offset_top = 440.0
-offset_right = -288.0
-offset_bottom = 510.0
+offset_left = -500.0
+offset_top = 600.0
+offset_right = -450.0
+offset_bottom = 650.0
 scale = Vector2(3, 3)
-size_flags_horizontal = 4
-size_flags_vertical = 4
 alignment = 1
+
+[node name="EnemyContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(50, 0)
+layout_direction = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1147.0
+offset_top = 381.0
+offset_right = -697.0
+offset_bottom = 423.0
+grow_vertical = 0
+pivot_offset = Vector2(225, 25)
+mouse_filter = 2
 
 [connection signal="pressed" from="TopMenu/TopLineBox/EscapeButton" to="." method="_on_escape_button_pressed"]
 [connection signal="pressed" from="TopMenu/DeckOfCards" to="." method="_on_deck_of_cards_pressed"]

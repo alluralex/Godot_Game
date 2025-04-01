@@ -32,16 +32,15 @@ offset_top = 1.0
 offset_right = 49.0
 offset_bottom = 71.0
 pivot_offset = Vector2(24, 70)
+script = ExtResource("1_yo24u")
 
-[node name="TGUI" type="Panel" parent="." node_paths=PackedStringArray("Card")]
+[node name="TGUI" type="Panel" parent="."]
 unique_name_in_owner = true
 layout_direction = 2
 layout_mode = 0
 offset_top = 1.0
 offset_right = 48.0
 offset_bottom = 71.0
-script = ExtResource("1_yo24u")
-Card = NodePath("..")
 
 [node name="Card_png" type="Sprite2D" parent="TGUI"]
 position = Vector2(23.5, 34.96)
@@ -106,6 +105,6 @@ visible = false
 points = PackedVector2Array(-230, 311, 230, 311, 230, 0.3, 230, -310, -230, -310, -230, 320)
 width = 20.0
 
-[connection signal="gui_input" from="TGUI" to="TGUI" method="_on_gui_input"]
-[connection signal="mouse_entered" from="TGUI" to="TGUI" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TGUI" to="TGUI" method="_on_mouse_exited"]
+[connection signal="gui_input" from="TGUI" to="." method="_on_tgui_gui_input"]
+[connection signal="mouse_entered" from="TGUI" to="." method="_on_tgui_mouse_entered"]
+[connection signal="mouse_exited" from="TGUI" to="." method="_on_tgui_mouse_exited"]

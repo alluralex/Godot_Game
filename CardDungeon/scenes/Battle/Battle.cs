@@ -7,11 +7,16 @@ using Game.Creatures;
 public partial class Battle : Node2D
 {
     public Hero MyHero { get; set; }
+
     private List<Control> Cards { get; set; } = new();
     private List<Enemy> Enemies { get; set; } = new();
-    public static Control SelectedCard { get; set; }
+    
+    public static Control SelectedCard { get; set; } = new();
+    
     [Export]
     public Control Hand { get; set; }
+    [Export]
+    public Control EnemyContainer { get; set; }
     [Export]
     public Label NameClass { get; set; }
     [Export]
@@ -40,21 +45,22 @@ public partial class Battle : Node2D
     private void CreateMonster()
     {
         Random rnd = new Random();
-        int countmonsters = 0;
-        countmonsters = rnd.Next(1, 4);
+        int countmonsters = rnd.Next(1, 5); ;
+        int number = 0;
 
-        for (int i = 0; i <= countmonsters; i++)
+        for (int i = 0; i < countmonsters; i++)
         {
             Enemies.Add(new Goblin());
 
             PackedScene goblin = GD.Load<PackedScene>("res://Creatures/Enemies/First_loc/Golem_small/golem_small.tscn");
 
-            Node2D newGoblinInstance = (Node2D)goblin.Instantiate();
+            Control newGoblinInstance = (Control)goblin.Instantiate();
 
-            newGoblinInstance.Translate(new Vector2(300, 348));
             newGoblinInstance.Scale = new Vector2(2, 2);
+            newGoblinInstance.Name = $"{Enemies[number].Name}{number}";
 
-            AddChild(newGoblinInstance);
+            EnemyContainer.AddChild(newGoblinInstance);
+            number++;
         }
     }
 
@@ -69,12 +75,11 @@ public partial class Battle : Node2D
 
             cardsInstance.Scale = new Vector2(3, 3);
             cardsInstance.Name = $"{card.Title}{number}";
+            cardsInstance.ZIndex = 2;
 
             number++;
 
             Hand.AddChild(cardsInstance);
-
-            GD.Print(Cards);
 
             Cards.Add(cardsInstance);
 
